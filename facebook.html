@@ -1,25 +1,37 @@
-<!--DOCTYPE html>
-<html>
-  <head>
-    <meta http-equiv="refresh" content="7; url='https://www.facebook.com/profile.php?id=100010223226871'" />
-  </head>
-  <body>
-    <p>Please follow <a href="https://www.facebook.com/profile.php?id=100010223226871">this link</a>.</p>
-  </body>
-</html-->
-
 <!DOCTYPE html>
 <html>
-  
-<head>
-    <title>Redirecting to Facebook contact</title>
-    <meta http-equiv="refresh" content="5; url =
-    https://www.facebook.com/profile.php?id=100010223226871" />
-</head>
-  
-<body>
-    <p style="text-align:center;" class="text-info container mt-5 text-center">Your Browser will automatically take you to my contact details in afew seconds ...</p>
-</body>
-  
-</html>
+  <head>
+    <title>Redirecting to Facebook</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
+    <meta http-equiv="refresh" content="5; url = https://www.facebook.com/profile.php?id=100010223226871" />
+    <style>
+      .loader {
+        margin-top:250px;
+        margin-left: auto;
+        margin-right: auto;
+        border: 16px solid #f3f3f3;
+        border-radius: 100%;
+        border-top: 16px solid #3498db;
+        width: 120px;
+        height: 120px;
+        -webkit-animation: spin 2s linear infinite; /* Safari */
+        animation: spin 2s linear infinite;
+      }
 
+      /* Safari */
+      @-webkit-keyframes spin {
+        0% { -webkit-transform: rotate(0deg); }
+        100% { -webkit-transform: rotate(360deg); }
+      }
+
+      @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
+    </style>
+  </head>
+    <body>
+      <div class="loader"></div>
+      <p style="text-align:center;" class="text-info container mt-5 text-center">Your Browser will automatically take you to my contact details in afew seconds ...</p>
+    </body>
+</html>
