@@ -266,6 +266,7 @@ input, select, textarea {
 	  }
 	
 	.fcf-body {
+		
 		margin-top: 50px;
 		margin-bottom: 60px;
 	    max-width: max-content;	
@@ -276,12 +277,13 @@ input, select, textarea {
 		line-height: 1.5;
 		color: #f0f3f6f1;
 		text-align: left;
-		background-image: url("images/bg.jpg");
+		/*background-image: url("images/bg.jpg");*/
 		padding: 30px;
 		padding-bottom: 10px;
 		/*border: 1px solid #ced4da;*/
 		border-radius: 0.25rem;
 		max-width: 70%;
+		
 	}
 	
 	.fcf-form-group {
