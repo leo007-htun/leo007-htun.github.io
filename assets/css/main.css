@@ -267,6 +267,7 @@ input, select, textarea {
 	
 	.fcf-body {
 		margin-top: 50px;
+		margin-bottom: 60px;
 	    max-width: max-content;	
 		margin: auto;
 		font-family: -apple-system, Arial, sans-serif;
