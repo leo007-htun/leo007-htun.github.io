@@ -944,6 +944,28 @@ input, select, textarea {
 		width: 100%;
 	}
 
+	.icon-bar {
+		width: 90px;
+		background-color: #555;
+	  }
+	  
+	  .icon-bar a {
+		display: block;
+		text-align: center;
+		padding: 16px;
+		transition: all 0.3s ease;
+		color: white;
+		font-size: 36px;
+	  }
+	  
+	  .icon-bar a:hover {
+		background-color: #000;
+	  }
+	  
+	  .active {
+		background-color: #04AA6D;
+	  }
+
 /* Wide */
 
 	@media screen and (max-width: 1680px) {
@@ -1215,6 +1237,7 @@ input, select, textarea {
 			#header nav a:active {
 				font-size: 1em;
 			} }
+		
 
 /* Mobile (Portrait) */
 
