@@ -14,14 +14,14 @@
 			<div id="overlay"></div>
 			<div id="main">
 
-				<!-- Header -->
+				<! Header -->
 					<!--<header id="header">
 						<h1>Sithu Ye Htun</h1>
 						<p>Robotics Engineer &nbsp;&bull;&nbsp; B.Eng (Mechatronics) &nbsp;&bull;&nbsp; +44 7393 082234 </p>
 						<nav>
 							<ul>
 								<li><a href="facebook.html" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-								<!--li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li-->
+								<!li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li-->
 								<!--li><a href="#" class="icon brands fa-dribbble"><span class="label">Dribbble</span></a></li-->
 								<!--<li><a href="github.html" class="icon brands fa-github"><span class="label">Github</span></a></li>
 								<li><a href="email.html" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
@@ -31,7 +31,7 @@
 					
 					</header>
 
-				<!-- Footer -->
+				<! Footer -->
 					<!--<footer id="footer">
 						<span class="copyright">&copy; Sithu Ye Htun: Portfolio <a href="http://html5up.net"></a></span>
 					</footer>
@@ -48,268 +48,334 @@
 
 <!DOCTYPE html>
 <html>
-<head>
-<title>Sithuyehtun_Portfolio</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<style>
-body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
-.w3-row-padding img {margin-bottom: 12px}
-/* Set the width of the sidebar to 120px */
-.w3-sidebar {width: 120px;background: #222;}
-/* Add a left margin to the "page content" that matches the width of the sidebar (120px) */
-#main {margin-left: 120px}
-/* Remove margins from "page content" on small screens */
-@media only screen and (max-width: 600px) {#main {margin-left: 0}}
-.fcf-form-control {
-		display: block;
-		width: 100%;
-		height: calc(1.5em + 0.75rem + 2px);
-		padding: 0.375rem 0.75rem;
-		font-size: 1rem;
-		font-weight: 400;
-		line-height: 1.5;
-		color: #495057;
-		background-color: #fff;
-		background-clip: padding-box;
-		border: 1px solid #ced4da;
-		outline: none;
-		border-radius: 0.25rem;
-		transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-	}
-</style>
-</head>
-<body class="w3-black">
+  <head>
+    <title>Sithuyehtun_Portfolio</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <style>
+        body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
+        .w3-row-padding img {margin-bottom: 12px}
+        /* Set the width of the sidebar to 120px */
+        .w3-sidebar {width: 120px;background: #222;}
+        /* Add a left margin to the "page content" that matches the width of the sidebar (120px) */
+        #main {margin-left: 120px}
+        /* Remove margins from "page content" on small screens */
+        @media only screen and (max-width: 600px) {#main {margin-left: 0}}
+        .fcf-form-control {
+            display: block;
+            width: 100%;
+            height: calc(1.5em + 0.75rem + 2px);
+            padding: 0.375rem 0.75rem;
+            font-size: 1rem;
+            font-weight: 400;
+            line-height: 1.5;
+            color: #495057;
+            background-color: #fff;
+            background-clip: padding-box;
+            border: 1px solid #ced4da;
+            outline: none;
+            border-radius: 0.25rem;
+            transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+          }
+          .container {
+          position: relative;
+          width: 100%;
+        }
 
-<!-- Icon Bar (Sidebar - hidden on small screens) -->
-<nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
-  <!-- Avatar image in top left corner -->
-  <!--img src="/w3images/avatar_smoke.jpg" style="width:100%"-->
-  <a href="#" class="w3-bar-item w3-button w3-padding-large w3-black">
-    <i class="fa fa-home w3-xxlarge"></i>
-    <p>HOME</p>
-  </a>
-  <a href="#about" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
-    <i class="fa fa-user w3-xxlarge"></i>
-    <p>ABOUT</p>
-  </a>
-  <a href="#photos" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
-    <i class="fa fa-cogs w3-xxlarge"></i>
-    <p>PROJECTS</p>
-  </a>
-  <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
-    <i class="fa fa-envelope w3-xxlarge"></i>
-    <p>CONTACT</p>
-  </a>
-</nav>
+        .image {
+          opacity: 1;
+          display: block;
+          width: 100%;
+          height: auto;
+          transition: .5s ease;
+          backface-visibility: hidden;
+        }
 
-<!-- Navbar on small screens (Hidden on medium and large screens) -->
-<div class="w3-top w3-hide-large w3-hide-medium" id="myNavbar">
-  <div class="w3-bar w3-black w3-opacity w3-hover-opacity-off w3-center w3-small">
-    <a href="#" class="w3-bar-item w3-button" style="width:25% !important">HOME</a>
-    <a href="#about" class="w3-bar-item w3-button" style="width:25% !important">ABOUT</a>
-    <a href="#photos" class="w3-bar-item w3-button" style="width:25% !important">PROJECTS</a>
-    <a href="#contact" class="w3-bar-item w3-button" style="width:25% !important">CONTACT</a>
-  </div>
-</div>
+        .middle {
+          transition: .5s ease;
+          opacity: 0;
+          position: absolute;
+          text-align: center;
+          top: 50%;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          height: 100%;
+          width: 100%;
+        }
 
-<!-- Page Content -->
-<div class="w3-padding-large" id="main">
-  <!-- Header/Home -->
-  <header class="w3-container w3-padding-32 w3-center w3-black" id="home">
-    <h1 class="w3-jumbo"><span class="w3-hide-small">SITHU YE HTUN</span></h1>
-    <p>MSc in AI and Machine Learning &nbsp;&bull;&nbsp; B.Eng(Mechatronics) &nbsp;&bull;&nbsp; Robotics Developer</p>
-    <img src="IMG-5751.jpg" alt="boy" class="w3-image" width="480" height="120">
-  </header>
+        .container:hover .image {
+          opacity: 0.3;
+        }
 
-  <!-- About Section -->
-  <div class="w3-content w3-justify w3-text-grey w3-padding-64" id="about">
-    <h2 class="w3-text-light-grey">My Name</h2>
-    <hr style="width:200px" class="w3-opacity">
-    <p>Hello, I'm Sithu Ye Htun. My background education is from Mechatronics and currently developing to integrate Simultaneous Localizaton and Mapping (SLAM) on chip (SoC) with my team (ROM ROBOTICS). My all time favourite hobby is to make robots and implement to control them. In 2019, I graduated from University of Wolverhampton with Bachelor's Degree and wroked as a internship trainee at ROM Robotics. At ROM, we successfully implemented micro-controller for robots with Yocto (Embedded System) which allows to use 9DOF movements and besides, it enables the user to utilize on multiple platforms such as, ROS, ROS2, RTOS and micro-ROS. My Role and Responsibility at ROM was to design robots and produce URDF to use it on visualization and hardware products, problem solving, deriving Mathematical equations and developing as well as maintaining the codes.   
-    </p>
-    <h3 class="w3-padding-16 w3-text-light-grey">My Skills</h3>
-    <p class="w3-wide">C++</p>
-    <div class="w3-white">
-      <div class="w3-dark-grey" style="height:28px;width:80%"></div>
-    </div>
-    <p class="w3-wide">C#</p>
-    <div class="w3-white">
-      <div class="w3-dark-grey" style="height:28px;width:35%"></div>
-    </div>
-    <p class="w3-wide">Python</p>
-    <div class="w3-white">
-      <div class="w3-dark-grey" style="height:28px;width:65%"></div>
-    </div>
-    <p class="w3-wide">Web Design</p>
-    <div class="w3-white">
-      <div class="w3-dark-grey" style="height:28px;width:60%"></div>
-    </div>
-    <p class="w3-wide">Solid Works</p>
-    <div class="w3-white">
-      <div class="w3-dark-grey" style="height:28px;width:70%"></div>
-    </div>
-    <p class="w3-wide">Linux</p>
-    <div class="w3-white">
-      <div class="w3-dark-grey" style="height:28px;width:70%"></div>
-    </div>
-    <p class="w3-wide">ROS</p>
-    <div class="w3-white">
-      <div class="w3-dark-grey" style="height:28px;width:80%"></div>
-    </div>
-    <p class="w3-wide">ROS2</p>
-    <div class="w3-white">
-      <div class="w3-dark-grey" style="height:28px;width:10%"></div>
-    </div>
-    <p class="w3-wide">RTOS</p>
-    <div class="w3-white">
-      <div class="w3-dark-grey" style="height:28px;width:10%"></div>
-    </div>
-    <br>
+        .container:hover .middle {
+          opacity: 1;
+        }
 
-    <!--div class="w3-row w3-center w3-padding-16 w3-section w3-light-grey">
-      <div class="w3-quarter w3-section">
-        <span class="w3-xlarge">11+</span><br>
-        Partners
-      </div>
-      <div class="w3-quarter w3-section">
-        <span class="w3-xlarge">55+</span><br>
-        Projects Done
-      </div>
-      <div class="w3-quarter w3-section">
-        <span class="w3-xlarge">89+</span><br>
-        Happy Clients
-      </div>
-      <div class="w3-quarter w3-section">
-        <span class="w3-xlarge">150+</span><br>
-        Meetings
-      </div>
-    </div-->
-    <a href="Sithu_YeHTun_CV.pdf" download>
-    <button class="w3-button w3-light-grey w3-padding-large w3-section">
-      <i class="fa fa-download"></i> Download CV
-    </button>
-    </a>
+        .text {
+          /*background-color: #04AA6D;*/
+          color: white;
+          font-size: 20px;
+          /*padding: px 64px;*/
+        }
+        * {
+          box-sizing: border-box;
+        }
+
+        .column {
+          float: left;
+          width: 33.33%;
+          padding: 5px;
+        }
+
+        /* Clearfix (clear floats) */
+        .row::after {
+          content: "";
+          clear: both;
+          display: table;
+        }
+      </style>
+  </head>
+  <body class="w3-black">
+
+      <!-- Icon Bar (Sidebar - hidden on small screens) -->
+        <nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
+          <!-- Avatar image in top left corner -->
+          <!--img src="/w3images/avatar_smoke.jpg" style="width:100%"-->
+          <a href="#" class="w3-bar-item w3-button w3-padding-large w3-black"><i class="fa fa-home w3-xxlarge"></i><p>HOME</p></a>
+          <a href="#about" class="w3-bar-item w3-button w3-padding-large w3-hover-black"><i class="fa fa-user w3-xxlarge"></i><p>ABOUT</p></a>
+          <a href="#photos" class="w3-bar-item w3-button w3-padding-large w3-hover-black"><i class="fa fa-cogs w3-xxlarge"></i><p>PROJECTS</p></a>
+          <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hover-black"><i class="fa fa-envelope w3-xxlarge"></i><p>CONTACT</p></a>
+        </nav>
+
+        <!-- Navbar on small screens (Hidden on medium and large screens) -->
+        <div class="w3-top w3-hide-large w3-hide-medium" id="myNavbar">
+          <div class="w3-bar w3-black w3-opacity w3-hover-opacity-off w3-center w3-small">
+            <a href="#" class="w3-bar-item w3-button" style="width:25% !important">HOME</a>
+            <a href="#about" class="w3-bar-item w3-button" style="width:25% !important">ABOUT</a>
+            <a href="#photos" class="w3-bar-item w3-button" style="width:25% !important">PROJECTS</a>
+            <a href="#contact" class="w3-bar-item w3-button" style="width:25% !important">CONTACT</a>
+          </div>
+        </div>
+
+        <!-- Page Content -->
+        <div class="w3-padding-large" id="main">
+          <!-- Header/Home -->
+            <header class="w3-container w3-padding-32 w3-center w3-black" id="home">
+              <h1 class="w3-jumbo"><span class="w3-hide-small">SITHU YE HTUN</span></h1>
+              <p>MSc in AI and Machine Learning &nbsp;&bull;&nbsp; B.Eng(Mechatronics) &nbsp;&bull;&nbsp; Robotics Developer</p>
+              <img src="IMG-5751.jpg" alt="boy" class="w3-image" width="480" height="120">
+            </header>
+
+          <!-- About Section -->
+          <div class="w3-content w3-justify w3-text-grey w3-padding-64" id="about">
+            <h2 class="w3-text-light-grey">My Name</h2>
+            <hr style="width:200px" class="w3-opacity">
+            <p>Hello, I'm Sithu Ye Htun. My background education is from Mechatronics and currently developing to integrate Simultaneous Localizaton and Mapping (SLAM) on chip (SoC) with my team (ROM ROBOTICS). My all time favourite hobby is to make robots and implement to control them. In 2019, I graduated from University of Wolverhampton with Bachelor's Degree and wroked as a internship trainee at ROM Robotics. At ROM, we successfully implemented micro-controller for robots with Yocto (Embedded System) which allows to use 9DOF movements and besides, it enables the user to utilize on multiple platforms such as, ROS, ROS2, RTOS and micro-ROS. My Role and Responsibility at ROM was to design robots and produce URDF to use it on visualization and hardware products, problem solving, deriving Mathematical equations and developing as well as maintaining the codes.</p>
+            <h3 class="w3-padding-16 w3-text-light-grey">My Skills</h3>
+            <p class="w3-wide">C++</p>
+              <div class="w3-white">
+                <div class="w3-dark-grey" style="height:28px;width:80%"></div>
+              </div>
+            <p class="w3-wide">C#</p>
+              <div class="w3-white">
+                <div class="w3-dark-grey" style="height:28px;width:35%"></div>
+              </div>
+            <p class="w3-wide">Python</p>
+              <div class="w3-white">
+                <div class="w3-dark-grey" style="height:28px;width:65%"></div>
+              </div>
+            <p class="w3-wide">Web Design</p>
+              <div class="w3-white">
+                <div class="w3-dark-grey" style="height:28px;width:60%"></div>
+              </div>
+            <p class="w3-wide">Solid Works</p>
+              <div class="w3-white">
+                <div class="w3-dark-grey" style="height:28px;width:70%"></div>
+              </div>
+            <p class="w3-wide">Linux</p>
+              <div class="w3-white">
+                <div class="w3-dark-grey" style="height:28px;width:70%"></div>
+              </div>
+            <p class="w3-wide">ROS</p>
+              <div class="w3-white">
+                <div class="w3-dark-grey" style="height:28px;width:80%"></div>
+              </div>
+            <p class="w3-wide">ROS2</p>
+              <div class="w3-white">
+                <div class="w3-dark-grey" style="height:28px;width:10%"></div>
+              </div>
+            <p class="w3-wide">RTOS</p>
+              <div class="w3-white">
+                <div class="w3-dark-grey" style="height:28px;width:10%"></div>
+              </div>
+            <br>
+
+                            <!--div class="w3-row w3-center w3-padding-16 w3-section w3-light-grey">
+                              <div class="w3-quarter w3-section">
+                                <span class="w3-xlarge">11+</span><br>
+                                Partners
+                              </div>
+                              <div class="w3-quarter w3-section">
+                                <span class="w3-xlarge">55+</span><br>
+                                Projects Done
+                              </div>
+                              <div class="w3-quarter w3-section">
+                                <span class="w3-xlarge">89+</span><br>
+                                Happy Clients
+                              </div>
+                              <div class="w3-quarter w3-section">
+                                <span class="w3-xlarge">150+</span><br>
+                                Meetings
+                              </div>
+                            </div-->
+                            <a href="Sithu_YeHTun_CV.pdf" download><button class="w3-button w3-light-grey w3-padding-large w3-section"><i class="fa fa-download"></i> Download CV</button></a>
+                  
+                  <!-- Grid for pricing tables>
+                  <h3 class="w3-padding-16 w3-text-light-grey">My Price</h3>
+                  <div class="w3-row-padding" style="margin:0 -16px">
+                    <div class="w3-half w3-margin-bottom">
+                      <ul class="w3-ul w3-white w3-center w3-opacity w3-hover-opacity-off">
+                        <li class="w3-dark-grey w3-xlarge w3-padding-32">Basic</li>
+                        <li class="w3-padding-16">Web Design</li>
+                        <li class="w3-padding-16">Photography</li>
+                        <li class="w3-padding-16">5GB Storage</li>
+                        <li class="w3-padding-16">Mail Support</li>
+                        <li class="w3-padding-16">
+                          <h2>$ 10</h2>
+                          <span class="w3-opacity">per month</span>
+                        </li>
+                        <li class="w3-light-grey w3-padding-24">
+                          <button class="w3-button w3-white w3-padding-large w3-hover-black">Sign Up</button>
+                        </li>
+                      </ul>
+                    </div>
+
+                    <div class="w3-half">
+                      <ul class="w3-ul w3-white w3-center w3-opacity w3-hover-opacity-off">
+                        <li class="w3-dark-grey w3-xlarge w3-padding-32">Pro</li>
+                        <li class="w3-padding-16">Web Design</li>
+                        <li class="w3-padding-16">Photography</li>
+                        <li class="w3-padding-16">50GB Storage</li>
+                        <li class="w3-padding-16">Endless Support</li>
+                        <li class="w3-padding-16">
+                          <h2>$ 25</h2>
+                          <span class="w3-opacity">per month</span>
+                        </li>
+                        <li class="w3-light-grey w3-padding-24">
+                          <button class="w3-button w3-white w3-padding-large w3-hover-black">Sign Up</button>
+                        </li>
+                      </ul>
+                    </div>
+                  <End Grid/Pricing tables -->
+           </div>  
     
-    <!-- Grid for pricing tables>
-    <h3 class="w3-padding-16 w3-text-light-grey">My Price</h3>
-    <div class="w3-row-padding" style="margin:0 -16px">
-      <div class="w3-half w3-margin-bottom">
-        <ul class="w3-ul w3-white w3-center w3-opacity w3-hover-opacity-off">
-          <li class="w3-dark-grey w3-xlarge w3-padding-32">Basic</li>
-          <li class="w3-padding-16">Web Design</li>
-          <li class="w3-padding-16">Photography</li>
-          <li class="w3-padding-16">5GB Storage</li>
-          <li class="w3-padding-16">Mail Support</li>
-          <li class="w3-padding-16">
-            <h2>$ 10</h2>
-            <span class="w3-opacity">per month</span>
-          </li>
-          <li class="w3-light-grey w3-padding-24">
-            <button class="w3-button w3-white w3-padding-large w3-hover-black">Sign Up</button>
-          </li>
-        </ul>
-      </div>
-
-      <div class="w3-half">
-        <ul class="w3-ul w3-white w3-center w3-opacity w3-hover-opacity-off">
-          <li class="w3-dark-grey w3-xlarge w3-padding-32">Pro</li>
-          <li class="w3-padding-16">Web Design</li>
-          <li class="w3-padding-16">Photography</li>
-          <li class="w3-padding-16">50GB Storage</li>
-          <li class="w3-padding-16">Endless Support</li>
-          <li class="w3-padding-16">
-            <h2>$ 25</h2>
-            <span class="w3-opacity">per month</span>
-          </li>
-          <li class="w3-light-grey w3-padding-24">
-            <button class="w3-button w3-white w3-padding-large w3-hover-black">Sign Up</button>
-          </li>
-        </ul>
-      </div>
-    <!-- End Grid/Pricing tables -->
-    </div>
-    
-    <!-- Testimonials >
-    <h3 class="w3-padding-24 w3-text-light-grey">My Reputation</h3>  
-    <img src="/w3images/bandmember.jpg" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:80px">
-    <p><span class="w3-large w3-margin-right">Chris Fox.</span> CEO at Mighty Schools.</p>
-    <p>John Doe saved us from a web disaster.</p><br>
-    
-    <img src="/w3images/avatar_g2.jpg" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:80px">
-    <p><span class="w3-large w3-margin-right">Rebecca Flex.</span> CEO at Company.</p>
-    <p>No one is better than John Doe.</p-->
-  <!-- End About Section -->
-  </div>
+                    <!-- Testimonials >
+                    <h3 class="w3-padding-24 w3-text-light-grey">My Reputation</h3>  
+                    <img src="/w3images/bandmember.jpg" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:80px">
+                    <p><span class="w3-large w3-margin-right">Chris Fox.</span> CEO at Mighty Schools.</p>
+                    <p>John Doe saved us from a web disaster.</p><br>
+                    
+                    <img src="/w3images/avatar_g2.jpg" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:80px">
+                    <p><span class="w3-large w3-margin-right">Rebecca Flex.</span> CEO at Company.</p>
+                    <p>No one is better than John Doe.</p-->
+                  <!-- End About Section -->
+          </div>
   
-  <!-- Portfolio Section -->
-  <div class="w3-padding-64 w3-content" id="photos">
-    <h2 class="w3-text-light-grey">RECENT PROJECTS</h2>
-    <hr style="width:200px" class="w3-opacity">
+          <!-- Portfolio Section -->
+          <div class="w3-padding-64 w3-content" id="photos">
+            <h2 class="w3-text-light-grey">RECENT PROJECTS</h2>
+            <hr style="width:200px" class="w3-opacity">
 
-    <!-- Grid for photos -->
-    <div class="w3-row-padding" style="margin:0 -16px">
-      <div class="w3-half">
-        <img src="micro-controller.PNG" style="width:50%">
-        <img src="ROM_robot.jpg" style="width:50%">
-      </div>
+              <!-- Grid for photos -->
+              <div class="w3-row-padding" style="margin:0 -16px">
+                  <div class="row">
+                    <div class="column">
+                      <div class="container">
+                        <a href="#"><img src="micro-controller.PNG" class="image" style="width:100%">
+                          <div class="middle">
+                          <div class="text">STMF103 Micro-Controller</div>
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="column">
+                      <div class="container">
+                        <a href="#"><img src="ROM_robot.jpg" class="image" style="width:100%">
+                          <div class="middle">
+                          <div class="text">3D-Printed Mobile Robot with Banana-pi</div>
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+                        <div class="column">
+                          <div class="container">
+                            <a href="#"><img src="hectorslam.jpg" class="image" style="width:100%">
+                              <div class="middle">
+                                <div class="text">Mobile Robot with the use of Hectorslam</div>
+                              </div>
+                            </a>
+                          </div>
+                        </div>
+                        <div class="column">
+                          <div class="container">
+                            <a href="#"><img src="tallbot.jpg" class="image" style="width:100%">
+                              <div class="middle">
+                                <div class="text">Mobile Robot Simulation</div>
+                              </div>
+                            </a>
+                          </div>
+                        </div>
+                  </div>
+              </div>
+              </div>
+          
+              <!-- Contact Section -->
+              <form action="https://formsubmit.co/sithu.y.htun@gmail.com" method="POST">
+                <div class="w3-padding-64 w3-content w3-text-grey" id="contact">
+                  <h2 class="w3-text-light-grey">Contact Me</h2>
+                  <hr style="width:200px" class="w3-opacity">
 
-      <div class="w3-half">
-        <img src="hectorslam.jpg" style="width:50%">
-        <img src="tallbot.jpg" style="width:50%">
-        <!--img src="ROM_robot.jpg" style="width:50%">
-        <img src="ROM_robot.jpg" style="width:50%"-->
-      </div>
-    <!-- End photo grid -->
-    </div>
-  <!-- End Portfolio Section -->
-  </div>
+                  <div class="w3-section">
+                    <p><i class="fa fa-map-marker fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> Liverpool, UK</p>
+                    <p><i class="fa fa-phone fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> Phone: +44 7393 082234</p>
+                    <p><i class="fa fa-envelope fa-fw w3-text-white w3-xxlarge w3-margin-right"> </i> Email: sithu.y.htun@gmail.com</p>
+                  </div><br>
+                      <p>Let's get in touch. Send me a message:</p>
 
-  <!-- Contact Section -->
-  <form action="https://formsubmit.co/sithu.y.htun@gmail.com" method="POST">
-    <div class="w3-padding-64 w3-content w3-text-grey" id="contact">
-      <h2 class="w3-text-light-grey">Contact Me</h2>
-      <hr style="width:200px" class="w3-opacity">
+                      <form action="/action_page.php" target="_blank">
+                        <p><input class="w3-input w3-padding-16" type="text" placeholder="Name" required name="Name"></p>
+                        <p><input class="w3-input w3-padding-16" type="text" placeholder="Email" required name="Email"></p>
+                        <p><input class="w3-input w3-padding-16" type="text" placeholder="Subject" required name="Subject"></p>
+                        <p><input class="w3-input w3-padding-16" type="text" placeholder="Message" required name="Message"></p>
+                        <p>
+                          <button class="w3-button w3-light-grey w3-padding-large" type="submit">
+                              <i class="fa fa-paper-plane"></i> SEND MESSAGE
+                            </button>
+                        </p>
+                      </form>
+                </div>
+              </div>
+              </form>
+              
+                <!-- Footer -->
+                  <!--footer class="w3-content w3-padding-64 w3-text-grey w3-xlarge">
+                    <i class="fa fa-facebook-official w3-hover-opacity"></i>
+                    <i class="fa fa-instagram w3-hover-opacity"></i>
+                    <i class="fa fa-snapchat w3-hover-opacity"></i>
+                    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+                    <i class="fa fa-twitter w3-hover-opacity"></i>
+                    <i class="fa fa-linkedin w3-hover-opacity"></i>
+                    <p class="w3-medium">Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank" class="w3-hover-text-green">w3.css</a></p-->
+                    <!-- End footer -->
+              </footer>
 
-      <div class="w3-section">
-        <p><i class="fa fa-map-marker fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> Liverpool, UK</p>
-        <p><i class="fa fa-phone fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> Phone: +44 7393 082234</p>
-        <p><i class="fa fa-envelope fa-fw w3-text-white w3-xxlarge w3-margin-right"> </i> Email: sithu.y.htun@gmail.com</p>
-      </div><br>
-        <p>Let's get in touch. Send me a message:</p>
+              <!-- END PAGE CONTENT -->
 
-        <form action="/action_page.php" target="_blank">
-          <p><input class="w3-input w3-padding-16" type="text" placeholder="Name" required name="Name"></p>
-          <p><input class="w3-input w3-padding-16" type="text" placeholder="Email" required name="Email"></p>
-          <p><input class="w3-input w3-padding-16" type="text" placeholder="Subject" required name="Subject"></p>
-          <p><input class="w3-input w3-padding-16" type="text" placeholder="Message" required name="Message"></p>
-          <p>
-            <button class="w3-button w3-light-grey w3-padding-large" type="submit">
-              <i class="fa fa-paper-plane"></i> SEND MESSAGE
-            </button>
-          </p>
-        </form>
-      </div>
-    </div>
-  </form>
-  
-    <!-- Footer -->
-  <!--footer class="w3-content w3-padding-64 w3-text-grey w3-xlarge">
-    <i class="fa fa-facebook-official w3-hover-opacity"></i>
-    <i class="fa fa-instagram w3-hover-opacity"></i>
-    <i class="fa fa-snapchat w3-hover-opacity"></i>
-    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
-    <i class="fa fa-twitter w3-hover-opacity"></i>
-    <i class="fa fa-linkedin w3-hover-opacity"></i>
-    <p class="w3-medium">Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank" class="w3-hover-text-green">w3.css</a></p-->
-  <!-- End footer -->
-  </footer>
-
-<!-- END PAGE CONTENT -->
-</div>
-
-</body>
+          </div>
+        </div>
+  </body>
 </html>
