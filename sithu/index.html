@@ -74,6 +74,16 @@ h2::before{content:"";width:18px;height:3px;background:var(--cyan);display:inlin
 .chip{font-size:.75rem;border:1px solid var(--line);color:var(--muted);padding:2px 8px;border-radius:999px}
 .feature{border-color:var(--cyan);grid-column:1/-1}
 .feature .stats{display:flex;flex-wrap:wrap;gap:8px 18px;margin:0 0 12px;font-size:.9rem;color:var(--green)}
+.pubs{display:flex;flex-direction:column;gap:14px}
+.pub{background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--cyan);border-radius:10px;padding:18px}
+.pub h3{color:var(--head);margin:4px 0 6px;font-size:1.05rem;line-height:1.4}
+.pub h3 a{color:var(--head)}
+.pub p{margin:0 0 10px;font-size:.95rem}
+.pub .authors{color:var(--text)}
+.pub .venue{color:var(--muted);font-size:.88rem}
+.pub-status{font-size:.75rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase}
+.pub-status.ok{color:var(--green)}
+.pub-status.wip{color:var(--cyan)}
 .timeline{list-style:none;margin:0;padding:0;border-left:2px solid var(--line)}
 .timeline li{position:relative;padding:0 0 18px 20px}
 .timeline li::before{content:"";position:absolute;left:-7px;top:7px;width:12px;height:12px;border-radius:50%;background:var(--bg);border:2px solid var(--cyan)}
@@ -105,7 +115,7 @@ footer{padding:40px 0 56px;text-align:center;color:var(--muted);font-size:.9rem}
 </header>
 
 <nav class="toc"><div class="wrap">
-  <a href="#about">About</a><a href="#aon">AON</a><a href="#ai">AI projects</a><a href="#robotics">Robotics</a>
+  <a href="#about">About</a><a href="#research">Publications</a><a href="#aon">AON</a><a href="#ongoing">Research</a><a href="#projects">Projects</a>
   <a href="#experience">Experience</a><a href="#skills">Skills</a><a href="#contact">Contact</a>
 </div></nav>
 
@@ -117,9 +127,39 @@ footer{padding:40px 0 56px;text-align:center;color:var(--muted);font-size:.9rem}
   embedded systems: I started with Arduino and microcontrollers, moved to ROS navigation and robot models at
   ROM Robotics, and now work on large language model agents: memory, retrieval, tool use and serving models on a
   single GPU.</p>
-  <p>Most of my recent work comes together in <a href="#aon">AON</a>, a self-hosted AI agent I designed, built and
+  <p>At Liverpool John Moores University I work as a Research Assistant on applied AI and robotics, with work published at IEEE DeSE and in review on emotion recognition for social robots. Most of my own recent engineering comes together in <a href="#aon">AON</a>, a self-hosted AI agent I designed, built and
   shipped end to end: the agent loop, the model serving, the web and Android apps, the Python package and the
   MCP server.</p>
+</section>
+
+<section id="research">
+  <h2>Publications</h2>
+  <div class="pubs">
+    <article class="pub">
+      <div class="pub-status ok">Published · IEEE DeSE 2025</div>
+      <h3><a href="https://ieeexplore.ieee.org/document/11367895">Real-Time Autonomous Navigation on a Raspberry Pi with Deep Learning and Sensor Fusion</a></h3>
+      <p class="authors">B. Orimba, O. Aldhaibani, <b>S. Ye Htun</b>, R. Mohammed</p>
+      <p class="venue">2025 18th International Conference on Development in eSystem Engineering (DeSE), Bucharest, Romania · pp. 1–6 ·
+        <a href="https://doi.org/10.1109/DeSE68208.2025.11367895">doi:10.1109/DeSE68208.2025.11367895</a></p>
+      <p>A low-cost, end-to-end self-driving prototype on an RC car with a Raspberry Pi 4. A camera and an ultrasonic
+      sensor are combined by late fusion to read traffic lights and avoid obstacles. A fine-tuned SSD-MobileNetV2 reaches
+      0.812 mAP (COCO), and after INT8 quantisation and ONNX Runtime it runs in real time at about 286 ms per frame within
+      the Pi's thermal limits. The car stops on red or amber and moves only on a confirmed green with a clear path.</p>
+      <div class="chips"><span class="chip">Edge AI</span><span class="chip">Sensor fusion</span><span class="chip">TensorFlow</span><span class="chip">ONNX</span><span class="chip">Raspberry Pi</span></div>
+    </article>
+    <article class="pub">
+      <div class="pub-status wip">Submitted · IEEE journal</div>
+      <h3>Pep-FER: A Facial Emotion Recognition System using EfficientNetB0 with a Pepper Social Robot</h3>
+      <p class="authors">D. Reilly, <b>S. Ye Htun</b>, P. Fergus, C. Chalmers, M. Taylor, S. Thompson</p>
+      <p class="venue">Liverpool John Moores University · supported by the Liverpool City Region Life Sciences Investment Zone (TALASCM project)</p>
+      <p>Social robots could support care for older adults and people living with dementia, for example in Cognitive
+      Stimulation Therapy, but they need to read people's emotions. We built a facial emotion recognition system for the
+      Pepper robot using the NAOqi API and an EfficientNetB0 backbone, trained on a merged, balanced dataset. The best model
+      reaches 99.6% accuracy on the test set, and the system runs on Pepper alongside its existing functions without
+      slowing the robot down.</p>
+      <div class="chips"><span class="chip">Social robotics</span><span class="chip">Transfer learning</span><span class="chip">EfficientNetB0</span><span class="chip">Pepper</span><span class="chip">Healthcare</span></div>
+    </article>
+  </div>
 </section>
 
 <section id="aon">
@@ -151,83 +191,40 @@ footer{padding:40px 0 56px;text-align:center;color:var(--muted);font-size:.9rem}
   </div>
 </section>
 
-<section id="ai">
-  <h2>AI &amp; LLM projects</h2>
+<section id="ongoing">
+  <h2>Research in progress</h2>
+  <div class="grid">
+    <article class="card">
+      <h3>🧠 LatentRecall</h3>
+      <p>Can a language model gain lasting memory without changing its weights or keeping the conversation as text?
+      LatentRecall stores the model's own hidden-state traces of new experiences and uses them to reconstruct
+      information after the original context is gone.</p>
+      <div class="chips"><span class="chip">Active research</span><span class="chip">Transformers</span><span class="chip">Memory</span></div>
+      <div class="meta"><a href="https://github.com/leo007-htun/LatentRecall">Code</a></div>
+    </article>
+  </div>
+</section>
+
+<section id="projects">
+  <h2>Selected projects</h2>
   <div class="grid">
     <article class="card">
       <h3>🎙️ Full-Duplex Voice Assistant</h3>
       <p>Real-time voice assistant that listens and speaks at the same time, so you can interrupt it like a person.</p>
       <div class="chips"><span class="chip">JavaScript</span><span class="chip">Real-time audio</span><span class="chip">LLM</span></div>
-      <div class="meta"><a href="https://github.com/leo007-htun/full_duplex_assistant">Source</a><span>★ 6</span></div>
+      <div class="meta"><a href="https://github.com/leo007-htun/full_duplex_assistant">Code</a><span>★ 6</span></div>
     </article>
-    <article class="card">
-      <h3>🧠 LatentRecall</h3>
-      <p>Research: persistent memory for a frozen language model, stored as its own hidden-state traces instead of text,
-      and recalled after the original context is gone.</p>
-      <div class="chips"><span class="chip">Research</span><span class="chip">Transformers</span><span class="chip">Memory</span></div>
-      <div class="meta"><a href="https://github.com/leo007-htun/LatentRecall">Source</a></div>
-    </article>
-    <article class="card">
-      <h3>🏭 AMOS</h3>
-      <p>AI-powered industrial asset management: predictive maintenance with a monitoring dashboard.</p>
-      <div class="chips"><span class="chip">Predictive maintenance</span><span class="chip">Python</span></div>
-      <div class="meta"><a href="https://github.com/leo007-htun/AMOS">Source</a></div>
-    </article>
-    <article class="card">
-      <h3>📈 BPMN Assistant</h3>
-      <p>LLMs that create, edit and explain BPMN business-process diagrams, with a server-side deployment.</p>
-      <div class="chips"><span class="chip">LLM</span><span class="chip">Python</span></div>
-      <div class="meta"><a href="https://github.com/leo007-htun/bpmn_assistant_cyber3d">Source</a></div>
-    </article>
-    <article class="card">
-      <h3>🩺 Dr. JARVIS &amp; RAG with Llama</h3>
-      <p>A medical-diagnosis chatbot and a retrieval-augmented generation pipeline on Llama models.</p>
-      <div class="chips"><span class="chip">RAG</span><span class="chip">Llama</span></div>
-      <div class="meta"><a href="https://github.com/leo007-htun/Dr.JARVIS">Dr. JARVIS</a><a href="https://github.com/leo007-htun/RAG_LLAMA">RAG_LLAMA</a></div>
-    </article>
-    <article class="card">
-      <h3>👁️ Computer vision</h3>
-      <p>Object-detection model deployment with Docker, image auto-augmentation, hand-landmark mouse control and facial recognition.</p>
-      <div class="chips"><span class="chip">OpenCV</span><span class="chip">Docker</span><span class="chip">Transfer learning</span></div>
-      <div class="meta">
-        <a href="https://github.com/leo007-htun/Object_Detection_Model_Deployment">Deployment</a>
-        <a href="https://github.com/leo007-htun/Auto_Augment">Auto_Augment</a>
-        <a href="https://github.com/leo007-htun/Cursor_Control_by_Hand_Landmark_Detection">Hand cursor</a>
-      </div>
-    </article>
-  </div>
-</section>
-
-<section id="robotics">
-  <h2>Robotics</h2>
-  <div class="grid">
     <article class="card">
       <h3>🤖 GPT on the Pepper robot</h3>
-      <p>Running a GPT model on SoftBank's Pepper with the lowest latency I could get, plus facial-emotion recognition and a follow-me app.</p>
-      <div class="chips"><span class="chip">Pepper</span><span class="chip">LLM</span><span class="chip">Speech</span><span class="chip">Kotlin</span></div>
-      <div class="meta">
-        <a href="https://github.com/leo007-htun/pepper_gpt">pepper_gpt</a>
-        <a href="https://youtu.be/BHJpKFnpUOA">Video</a>
-        <a href="https://github.com/leo007-htun/Facial-Emotion-Recognition-With-Pepper-Robot">Emotion</a>
-      </div>
+      <p>A low-latency conversational Pepper robot, the platform behind the Pep-FER emotion recognition work.</p>
+      <div class="chips"><span class="chip">Pepper</span><span class="chip">LLM</span><span class="chip">Speech</span></div>
+      <div class="meta"><a href="https://github.com/leo007-htun/pepper_gpt">Code</a><a href="https://youtu.be/BHJpKFnpUOA">Video</a></div>
     </article>
     <article class="card">
       <h3>🏗️ AMR digital twin</h3>
       <p>An autonomous mobile robot in a simulated warehouse (Ignition Gazebo) as a digital twin.</p>
       <div class="chips"><span class="chip">ROS</span><span class="chip">Gazebo</span><span class="chip">Navigation</span></div>
-      <div class="meta"><a href="https://github.com/leo007-htun/AMR_Digital_Twin">Source</a></div>
-    </article>
-    <article class="card">
-      <h3>🗺️ Gazebo map to RViz</h3>
-      <p>Turns a text map into Gazebo 11 worlds (<code>.sdf</code>) and navigation maps (<code>.pgm</code>, <code>.yaml</code>).</p>
-      <div class="chips"><span class="chip">ROS</span><span class="chip">Shell</span></div>
-      <div class="meta"><a href="https://github.com/leo007-htun/Gazebo-map-to-Rviz">Source</a></div>
-    </article>
-    <article class="card">
-      <h3>🦾 ROM Robotics: ROS &amp; embedded</h3>
-      <p>Robot models (URDF) and simulation, localization research (adaptive Monte Carlo) and Yocto-based embedded Linux for robot controllers.</p>
-      <div class="chips"><span class="chip">ROS / ROS 2</span><span class="chip">URDF</span><span class="chip">Yocto</span><span class="chip">STM32</span></div>
-      <div class="meta"><a href="https://github.com/leo007-htun/rom2109_simulation">Simulation</a><a href="https://github.com/leo007-htun/URDF">URDF</a></div>
+      <div class="meta"><a href="https://github.com/leo007-htun/AMR_Digital_Twin">Code</a></div>
     </article>
   </div>
 </section>
