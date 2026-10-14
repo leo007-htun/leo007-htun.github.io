@@ -1,0 +1,282 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Sithu Ye Htun (Leo) · AI & Robotics Engineer</title>
+<meta name="description" content="Sithu Ye Htun (Leo), AI & Robotics Engineer and Research Assistant at Liverpool John Moores University. Builds self-hosted LLM agents, MCP servers, voice assistants and ROS robots. Creator of AON.">
+<link rel="canonical" href="https://leo007-htun.github.io/sithu/">
+<meta property="og:type" content="profile">
+<meta property="og:title" content="Sithu Ye Htun (Leo) · AI & Robotics Engineer">
+<meta property="og:description" content="Self-hosted LLM agents, MCP, voice assistants and ROS robots. Creator of AON.">
+<meta property="og:url" content="https://leo007-htun.github.io/sithu/">
+<meta property="og:image" content="https://avatars.githubusercontent.com/u/66962471?v=4">
+<meta name="twitter:card" content="summary">
+<link rel="icon" href="https://avatars.githubusercontent.com/u/66962471?s=64&v=4">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Sithu Ye Htun",
+  "alternateName": "Leo",
+  "jobTitle": "AI & Robotics Engineer",
+  "worksFor": { "@type": "CollegeOrUniversity", "name": "Liverpool John Moores University" },
+  "url": "https://leo007-htun.github.io/sithu/",
+  "image": "https://avatars.githubusercontent.com/u/66962471?v=4",
+  "sameAs": [
+    "https://github.com/leo007-htun",
+    "https://www.linkedin.com/in/sithu-ye-htun-1630b11a9/",
+    "https://pypi.org/project/aon-agent/",
+    "https://www.youtube.com/@SithuHtun-ku9lo"
+  ],
+  "knowsAbout": ["LLM agents", "Model Context Protocol", "Retrieval-augmented generation", "vLLM", "ROS", "Robotics", "Computer vision", "Embedded systems"]
+}
+</script>
+<style>
+:root{
+  --bg:#06161F; --panel:#0B2230; --line:#14384A; --text:#B8D4E3; --muted:#7FA3B6;
+  --head:#E6F4FA; --cyan:#00E5FF; --green:#3DDC97;
+}
+:root[data-theme="light"]{
+  --bg:#F4F8FB; --panel:#FFFFFF; --line:#D5E3EC; --text:#29404D; --muted:#5E7887;
+  --head:#0B2230; --cyan:#007C99; --green:#14855A;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--text);font:16px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+a{color:var(--cyan);text-decoration:none}
+a:hover{text-decoration:underline}
+.wrap{max-width:960px;margin:0 auto;padding:0 16px}
+header.hero{padding:72px 0 40px;text-align:center}
+.avatar{width:128px;height:128px;border-radius:50%;border:2px solid var(--cyan);display:block;margin:0 auto 20px}
+h1{color:var(--head);font-size:2.2rem;margin:0;letter-spacing:.02em}
+.role{color:var(--cyan);font-weight:600;font-size:1.15rem;margin:6px 0 4px;letter-spacing:.06em;text-transform:uppercase}
+.tag{color:var(--muted);margin:0 0 22px}
+.links{display:flex;flex-wrap:wrap;justify-content:center;gap:10px}
+.btn{display:inline-block;border:1px solid var(--cyan);color:var(--cyan);padding:8px 16px;border-radius:6px;font-weight:600;font-size:.95rem}
+.btn:hover{background:var(--cyan);color:var(--bg);text-decoration:none}
+.btn.solid{background:var(--cyan);color:var(--bg)}
+nav.toc{position:sticky;top:0;z-index:5;background:var(--bg);border-bottom:1px solid var(--line)}
+nav.toc .wrap{display:flex;gap:18px;overflow-x:auto;padding-top:10px;padding-bottom:10px;white-space:nowrap;scrollbar-width:none}
+nav.toc .wrap::-webkit-scrollbar{display:none}
+nav.toc a{color:var(--muted);font-weight:600;font-size:.9rem}
+nav.toc a:hover{color:var(--cyan);text-decoration:none}
+section{padding:40px 0 8px}
+h2{color:var(--head);font-size:1.4rem;margin:0 0 18px;display:flex;align-items:center;gap:10px}
+h2::before{content:"";width:18px;height:3px;background:var(--cyan);display:inline-block}
+.about p{margin:0 0 12px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:14px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:18px;display:flex;flex-direction:column}
+.card h3{color:var(--head);margin:0 0 6px;font-size:1.05rem}
+.card p{margin:0 0 12px;font-size:.95rem}
+.card .meta{margin-top:auto;display:flex;flex-wrap:wrap;gap:6px 14px;font-size:.88rem}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 12px}
+.chip{font-size:.75rem;border:1px solid var(--line);color:var(--muted);padding:2px 8px;border-radius:999px}
+.feature{border-color:var(--cyan);grid-column:1/-1}
+.feature .stats{display:flex;flex-wrap:wrap;gap:8px 18px;margin:0 0 12px;font-size:.9rem;color:var(--green)}
+.timeline{list-style:none;margin:0;padding:0;border-left:2px solid var(--line)}
+.timeline li{position:relative;padding:0 0 18px 20px}
+.timeline li::before{content:"";position:absolute;left:-7px;top:7px;width:12px;height:12px;border-radius:50%;background:var(--bg);border:2px solid var(--cyan)}
+.timeline .when{color:var(--muted);font-size:.85rem;font-weight:600}
+.timeline .what{color:var(--head);font-weight:600}
+.skills{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:14px}
+.skills div{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:14px}
+.skills b{color:var(--head);display:block;margin-bottom:4px}
+.skills span{font-size:.92rem}
+footer{padding:40px 0 56px;text-align:center;color:var(--muted);font-size:.9rem}
+.theme{position:fixed;right:14px;bottom:14px;background:var(--panel);color:var(--text);border:1px solid var(--line);border-radius:999px;padding:6px 12px;cursor:pointer;font:inherit;font-size:.85rem}
+@media (max-width:600px){h1{font-size:1.8rem}header.hero{padding-top:48px}}
+</style>
+</head>
+<body>
+
+<header class="hero wrap">
+  <img class="avatar" src="https://avatars.githubusercontent.com/u/66962471?v=4" alt="Sithu Ye Htun">
+  <h1>Sithu Ye Htun <span style="color:var(--muted);font-weight:400">(Leo)</span></h1>
+  <p class="role">AI &amp; Robotics Engineer</p>
+  <p class="tag">Research Assistant at Liverpool John Moores University<br>Self-hosted LLM agents · MCP · Voice AI · ROS robots</p>
+  <div class="links">
+    <a class="btn solid" href="https://github.com/leo007-htun">GitHub</a>
+    <a class="btn" href="https://www.linkedin.com/in/sithu-ye-htun-1630b11a9/">LinkedIn</a>
+    <a class="btn" href="mailto:sithu.y.htun@gmail.com">Email</a>
+    <a class="btn" href="https://www.youtube.com/@SithuHtun-ku9lo">YouTube</a>
+    <a class="btn" href="https://leo007-htun.github.io/AON/">AON</a>
+  </div>
+</header>
+
+<nav class="toc"><div class="wrap">
+  <a href="#about">About</a><a href="#aon">AON</a><a href="#ai">AI projects</a><a href="#robotics">Robotics</a>
+  <a href="#experience">Experience</a><a href="#skills">Skills</a><a href="#contact">Contact</a>
+</div></nav>
+
+<main class="wrap">
+
+<section id="about" class="about">
+  <h2>About</h2>
+  <p>I build AI systems that run on hardware you own, and robots that use them. My background is mechatronics and
+  embedded systems: I started with Arduino and microcontrollers, moved to ROS navigation and robot models at
+  ROM Robotics, and now work on large language model agents: memory, retrieval, tool use and serving models on a
+  single GPU.</p>
+  <p>Most of my recent work comes together in <a href="#aon">AON</a>, a self-hosted AI agent I designed, built and
+  shipped end to end: the agent loop, the model serving, the web and Android apps, the Python package and the
+  MCP server.</p>
+</section>
+
+<section id="aon">
+  <h2>Featured: AON</h2>
+  <div class="grid">
+    <article class="card feature">
+      <h3>🛰️ AON: a self-contained AI agent on your own GPU</h3>
+      <div class="stats"><span>PyPI: aon-agent</span><span>Official MCP Registry</span><span>Web + Android</span><span>~600 tests</span><span>MIT licensed</span></div>
+      <p>A private AI agent that runs entirely on local hardware, with no cloud LLM. It answers questions, runs tools
+      (files, shell, web search, maps), remembers the user across chats, reads their documents and extends itself
+      with new models, skills and MCP servers.</p>
+      <div class="chips">
+        <span class="chip">Python</span><span class="chip">FastAPI</span><span class="chip">vLLM</span><span class="chip">Ollama</span>
+        <span class="chip">RAG (SQLite FTS5 + vectors)</span><span class="chip">MCP server &amp; client</span><span class="chip">WebSocket</span>
+        <span class="chip">Android</span><span class="chip">Cloudflare Tunnel</span>
+      </div>
+      <p><b>What I built:</b> an agent loop with an approval gate for shell and file actions; long-term memory with
+      semantic search; a hybrid-search document library; exact-token context fitting against the model server;
+      a 27B model served with vLLM on one RTX 4090; OpenStreetMap routing on a 3D globe; a <code>pip</code>-installable
+      CLI; and an MCP server so Claude Desktop, Claude Code and Cursor can use AON as a tool.</p>
+      <div class="meta">
+        <a href="https://leo007-htun.github.io/AON/">Website</a>
+        <a href="https://github.com/leo007-htun/AON">Source</a>
+        <a href="https://pypi.org/project/aon-agent/">PyPI</a>
+        <a href="https://www.youtube.com/watch?v=wLiVhkLOd-8">Demo video</a>
+        <a href="https://github.com/leo007-htun/AON/releases/latest">Android APK</a>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section id="ai">
+  <h2>AI &amp; LLM projects</h2>
+  <div class="grid">
+    <article class="card">
+      <h3>🎙️ Full-Duplex Voice Assistant</h3>
+      <p>Real-time voice assistant that listens and speaks at the same time, so you can interrupt it like a person.</p>
+      <div class="chips"><span class="chip">JavaScript</span><span class="chip">Real-time audio</span><span class="chip">LLM</span></div>
+      <div class="meta"><a href="https://github.com/leo007-htun/full_duplex_assistant">Source</a><span>★ 6</span></div>
+    </article>
+    <article class="card">
+      <h3>🧠 LatentRecall</h3>
+      <p>Research: persistent memory for a frozen language model, stored as its own hidden-state traces instead of text,
+      and recalled after the original context is gone.</p>
+      <div class="chips"><span class="chip">Research</span><span class="chip">Transformers</span><span class="chip">Memory</span></div>
+      <div class="meta"><a href="https://github.com/leo007-htun/LatentRecall">Source</a></div>
+    </article>
+    <article class="card">
+      <h3>🏭 AMOS</h3>
+      <p>AI-powered industrial asset management: predictive maintenance with a monitoring dashboard.</p>
+      <div class="chips"><span class="chip">Predictive maintenance</span><span class="chip">Python</span></div>
+      <div class="meta"><a href="https://github.com/leo007-htun/AMOS">Source</a></div>
+    </article>
+    <article class="card">
+      <h3>📈 BPMN Assistant</h3>
+      <p>LLMs that create, edit and explain BPMN business-process diagrams, with a server-side deployment.</p>
+      <div class="chips"><span class="chip">LLM</span><span class="chip">Python</span></div>
+      <div class="meta"><a href="https://github.com/leo007-htun/bpmn_assistant_cyber3d">Source</a></div>
+    </article>
+    <article class="card">
+      <h3>🩺 Dr. JARVIS &amp; RAG with Llama</h3>
+      <p>A medical-diagnosis chatbot and a retrieval-augmented generation pipeline on Llama models.</p>
+      <div class="chips"><span class="chip">RAG</span><span class="chip">Llama</span></div>
+      <div class="meta"><a href="https://github.com/leo007-htun/Dr.JARVIS">Dr. JARVIS</a><a href="https://github.com/leo007-htun/RAG_LLAMA">RAG_LLAMA</a></div>
+    </article>
+    <article class="card">
+      <h3>👁️ Computer vision</h3>
+      <p>Object-detection model deployment with Docker, image auto-augmentation, hand-landmark mouse control and facial recognition.</p>
+      <div class="chips"><span class="chip">OpenCV</span><span class="chip">Docker</span><span class="chip">Transfer learning</span></div>
+      <div class="meta">
+        <a href="https://github.com/leo007-htun/Object_Detection_Model_Deployment">Deployment</a>
+        <a href="https://github.com/leo007-htun/Auto_Augment">Auto_Augment</a>
+        <a href="https://github.com/leo007-htun/Cursor_Control_by_Hand_Landmark_Detection">Hand cursor</a>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section id="robotics">
+  <h2>Robotics</h2>
+  <div class="grid">
+    <article class="card">
+      <h3>🤖 GPT on the Pepper robot</h3>
+      <p>Running a GPT model on SoftBank's Pepper with the lowest latency I could get, plus facial-emotion recognition and a follow-me app.</p>
+      <div class="chips"><span class="chip">Pepper</span><span class="chip">LLM</span><span class="chip">Speech</span><span class="chip">Kotlin</span></div>
+      <div class="meta">
+        <a href="https://github.com/leo007-htun/pepper_gpt">pepper_gpt</a>
+        <a href="https://youtu.be/BHJpKFnpUOA">Video</a>
+        <a href="https://github.com/leo007-htun/Facial-Emotion-Recognition-With-Pepper-Robot">Emotion</a>
+      </div>
+    </article>
+    <article class="card">
+      <h3>🏗️ AMR digital twin</h3>
+      <p>An autonomous mobile robot in a simulated warehouse (Ignition Gazebo) as a digital twin.</p>
+      <div class="chips"><span class="chip">ROS</span><span class="chip">Gazebo</span><span class="chip">Navigation</span></div>
+      <div class="meta"><a href="https://github.com/leo007-htun/AMR_Digital_Twin">Source</a></div>
+    </article>
+    <article class="card">
+      <h3>🗺️ Gazebo map to RViz</h3>
+      <p>Turns a text map into Gazebo 11 worlds (<code>.sdf</code>) and navigation maps (<code>.pgm</code>, <code>.yaml</code>).</p>
+      <div class="chips"><span class="chip">ROS</span><span class="chip">Shell</span></div>
+      <div class="meta"><a href="https://github.com/leo007-htun/Gazebo-map-to-Rviz">Source</a></div>
+    </article>
+    <article class="card">
+      <h3>🦾 ROM Robotics: ROS &amp; embedded</h3>
+      <p>Robot models (URDF) and simulation, localization research (adaptive Monte Carlo) and Yocto-based embedded Linux for robot controllers.</p>
+      <div class="chips"><span class="chip">ROS / ROS 2</span><span class="chip">URDF</span><span class="chip">Yocto</span><span class="chip">STM32</span></div>
+      <div class="meta"><a href="https://github.com/leo007-htun/rom2109_simulation">Simulation</a><a href="https://github.com/leo007-htun/URDF">URDF</a></div>
+    </article>
+  </div>
+</section>
+
+<section id="experience">
+  <h2>Experience &amp; education</h2>
+  <ul class="timeline">
+    <li><div class="when">2026</div><div class="what">Creator of AON</div>
+      <div>Designed, built and published a self-hosted AI agent: PyPI package, MCP Registry server, web and Android apps.</div></li>
+    <li><div class="when">Present</div><div class="what">Research Assistant, Liverpool John Moores University</div></li>
+    <li><div class="when">2020 – 2021</div><div class="what">ROS Developer, ROM Robotics (Myanmar)</div>
+      <div>Robot design and URDF models, ROS 2 and Docker, localization research and embedded Linux with the Yocto Project.</div></li>
+    <li><div class="when">2019 – 2020</div><div class="what">B.Eng Mechatronics, University of Wolverhampton</div></li>
+    <li><div class="when">2016 – 2018</div><div class="what">HND Electrical &amp; Electronic Engineering (Level 5), Pearson</div></li>
+  </ul>
+</section>
+
+<section id="skills">
+  <h2>Skills</h2>
+  <div class="skills">
+    <div><b>AI &amp; LLMs</b><span>Agents and tool use, RAG, embeddings, MCP, prompt design, vLLM and Ollama serving, PyTorch, TensorFlow, scikit-learn</span></div>
+    <div><b>Robotics</b><span>ROS and ROS 2, Gazebo, RViz, URDF, navigation and localization, Pepper</span></div>
+    <div><b>Software</b><span>Python, C++, C#, JavaScript and TypeScript, FastAPI, Flask, SQL, Android</span></div>
+    <div><b>Systems</b><span>Linux, Docker, Kubernetes, AWS, Cloudflare, embedded Linux (Yocto), STM32 and Arduino</span></div>
+    <div><b>Engineering</b><span>SolidWorks, AutoCAD, MATLAB, OpenCV, electronics</span></div>
+  </div>
+</section>
+
+<section id="contact">
+  <h2>Contact</h2>
+  <p>Open to roles in AI engineering, LLM agents and robotics. The quickest way to reach me is
+  <a href="mailto:sithu.y.htun@gmail.com">email</a> or <a href="https://www.linkedin.com/in/sithu-ye-htun-1630b11a9/">LinkedIn</a>. Demos of my work are on my <a href="https://www.youtube.com/@SithuHtun-ku9lo">YouTube channel</a>.</p>
+</section>
+
+</main>
+
+<footer>© 2026 Sithu Ye Htun · <a href="https://github.com/leo007-htun">github.com/leo007-htun</a></footer>
+
+<button class="theme" id="theme" type="button" aria-label="Toggle light or dark theme">◐ Theme</button>
+<script>
+(function () {
+  var root = document.documentElement, key = "sithu-theme";
+  try { var saved = localStorage.getItem(key); if (saved) root.setAttribute("data-theme", saved); } catch (e) {}
+  document.getElementById("theme").addEventListener("click", function () {
+    var next = root.getAttribute("data-theme") === "light" ? "dark" : "light";
+    root.setAttribute("data-theme", next);
+    try { localStorage.setItem(key, next); } catch (e) {}
+  });
+})();
+</script>
+</body>
+</html>
