@@ -91,6 +91,9 @@ h2::before{content:"";width:18px;height:3px;background:var(--cyan);display:inlin
 .vid:hover{border-color:var(--cyan);text-decoration:none}
 .sub{color:var(--head);font-size:1.05rem;margin:26px 0 12px}
 .lead{margin:0 0 16px}
+.humanoid{flex-direction:row;gap:20px;align-items:flex-start}
+.humanoid img{width:240px;max-width:40%;border-radius:8px;flex:none;background:#fff}
+@media (max-width:600px){.humanoid{flex-direction:column}.humanoid img{width:100%;max-width:100%}}
 .timeline{list-style:none;margin:0;padding:0;border-left:2px solid var(--line)}
 .timeline li{position:relative;padding:0 0 18px 20px}
 .timeline li::before{content:"";position:absolute;left:-7px;top:7px;width:12px;height:12px;border-radius:50%;background:var(--bg);border:2px solid var(--cyan)}
@@ -122,7 +125,7 @@ footer{padding:40px 0 56px;text-align:center;color:var(--muted);font-size:.9rem}
 </header>
 
 <nav class="toc"><div class="wrap">
-  <a href="#about">About</a><a href="#research">Publications</a><a href="#aon">AON</a><a href="#ongoing">Research</a><a href="#projects">Projects</a><a href="#videos">Videos</a>
+  <a href="#about">About</a><a href="#research">Publications</a><a href="#aon">AON</a><a href="#humanoid">Humanoid</a><a href="#ongoing">Research</a><a href="#projects">Projects</a><a href="#videos">Videos</a>
   <a href="#experience">Experience</a><a href="#skills">Skills</a><a href="#contact">Contact</a>
 </div></nav>
 
@@ -134,7 +137,7 @@ footer{padding:40px 0 56px;text-align:center;color:var(--muted);font-size:.9rem}
   embedded systems: I started with Arduino and microcontrollers, moved to ROS navigation and robot models at
   ROM Robotics, and now work on large language model agents: memory, retrieval, tool use and serving models on a
   single GPU.</p>
-  <p>At Liverpool John Moores University I work as a Research Assistant on applied AI and robotics, with work published at IEEE DeSE and in review on emotion recognition for social robots. My research focuses on memory in language models: what survives in their hidden states, and how that state can become lasting memory for agents and robots. Most of my own recent engineering comes together in <a href="#aon">AON</a>, a self-hosted AI agent I designed, built and
+  <p>At Liverpool John Moores University I work as a Research Assistant on applied AI and robotics, with work published at IEEE DeSE and in review on emotion recognition for social robots. My research focuses on memory in language models: what survives in their hidden states, and how that state can become lasting memory for agents and robots. I am also building <a href="#humanoid">J.A.R.V.I.S 0021</a>, an open humanoid robot for teaching robotics. Most of my own recent software comes together in <a href="#aon">AON</a>, a self-hosted AI agent I designed, built and
   shipped end to end: the agent loop, the model serving, the web and Android apps, the Python package and the
   MCP server.</p>
 </section>
@@ -223,6 +226,23 @@ footer{padding:40px 0 56px;text-align:center;color:var(--muted);font-size:.9rem}
       </div>
     </article>
   </div>
+</section>
+
+<section id="humanoid">
+  <h2>Humanoid: J.A.R.V.I.S 0021</h2>
+  <article class="card feature humanoid">
+    <img src="jarvis-0021.jpg" alt="J.A.R.V.I.S 0021 humanoid robot: a 3D-printed torso and arm with a depth-camera head" loading="lazy">
+    <div>
+      <div class="stats"><span>In progress</span><span>Open source</span><span>For research and teaching</span></div>
+      <p>A humanoid robot I am building to help students learn robotics hands-on. It brings together <b>ROS 2</b>,
+      <b>MoveIt</b>, vision-language and vision-language-action models (<b>VLM + VLA</b>) and <b>full-duplex</b> spoken
+      interaction, so students can learn perception, planning, control and AI-driven robot behaviour on one platform.</p>
+      <p>The goal is to make robotics education more practical, open and accessible for students who want to build,
+      experiment and do research.</p>
+      <div class="chips"><span class="chip">ROS 2</span><span class="chip">MoveIt</span><span class="chip">VLM</span><span class="chip">VLA</span><span class="chip">Full-duplex speech</span><span class="chip">3D printing</span><span class="chip">Robotics education</span></div>
+      <div class="meta"><a href="https://www.linkedin.com/posts/sithu-ye-htun_robotics-roboticseducation-ros2-share-7460723452337938432-Bv_n/">LinkedIn post</a></div>
+    </div>
+  </article>
 </section>
 
 <section id="ongoing">
