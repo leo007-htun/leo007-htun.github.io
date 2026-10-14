@@ -4,11 +4,11 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Sithu Ye Htun (Leo) · AI & Robotics Engineer</title>
-<meta name="description" content="Sithu Ye Htun (Leo), AI & Robotics Engineer and Research Assistant at Liverpool John Moores University. Builds self-hosted LLM agents, MCP servers, voice assistants and ROS robots. Creator of AON.">
+<meta name="description" content="Sithu Ye Htun (Leo), AI &amp; Robotics Engineer and Research Assistant at Liverpool John Moores University, working on embodied AI: memory, cognition and human–robot interaction. Creator of AON and the J.A.R.V.I.S 0021 humanoid.">
 <link rel="canonical" href="https://leo007-htun.github.io/sithu/">
 <meta property="og:type" content="profile">
 <meta property="og:title" content="Sithu Ye Htun (Leo) · AI & Robotics Engineer">
-<meta property="og:description" content="Self-hosted LLM agents, MCP, voice assistants and ROS robots. Creator of AON.">
+<meta property="og:description" content="Embodied AI: memory, cognition and human–robot interaction. Creator of AON and the J.A.R.V.I.S 0021 humanoid.">
 <meta property="og:url" content="https://leo007-htun.github.io/sithu/">
 <meta property="og:image" content="https://leo007-htun.github.io/sithu/sithu.jpg">
 <meta name="twitter:card" content="summary">
@@ -114,7 +114,7 @@ footer{padding:40px 0 56px;text-align:center;color:var(--muted);font-size:.9rem}
   <img class="avatar" src="sithu.jpg" alt="Sithu Ye Htun">
   <h1>Sithu Ye Htun <span style="color:var(--muted);font-weight:400">(Leo)</span></h1>
   <p class="role">AI &amp; Robotics Engineer</p>
-  <p class="tag">Research Assistant at Liverpool John Moores University<br>Self-hosted LLM agents · MCP · Voice AI · ROS robots</p>
+  <p class="tag">Research Assistant at Liverpool John Moores University<br>Embodied AI: memory, cognition and human–robot interaction</p>
   <div class="links">
     <a class="btn solid" href="https://github.com/leo007-htun">GitHub</a>
     <a class="btn" href="https://www.linkedin.com/in/sithu-ye-htun-1630b11a9/">LinkedIn</a>
@@ -248,7 +248,7 @@ footer{padding:40px 0 56px;text-align:center;color:var(--muted);font-size:.9rem}
 <section id="ongoing">
   <h2>Research</h2>
   <p class="lead">My research asks how language models can keep and use memory over time: what survives inside a model's
-  hidden states, and how that state could become real long-term memory for agents and robots.</p>
+  hidden states, and how that state could become real long-term memory for agents and robots, and how a language model can become a robot's mind that learns from experience instead of training.</p>
   <div class="pubs">
     <article class="pub">
       <div class="pub-status wip">PhD research proposal</div>
@@ -261,6 +261,20 @@ footer{padding:40px 0 56px;text-align:center;color:var(--muted);font-size:.9rem}
       improvements to memory. Evaluation uses synthetic tasks and public benchmarks (BABILong, LongMemEval,
       MemoryAgentBench) against strict, compute-matched baselines.</p>
       <div class="chips"><span class="chip">Hybrid LLMs</span><span class="chip">Gated DeltaNet</span><span class="chip">Long-term memory</span><span class="chip">Continual learning</span></div>
+    </article>
+    <article class="pub">
+      <div class="pub-status wip">Draft · October 2026</div>
+      <h3>Kedalion: A Cognitive Control Layer for Robotics</h3>
+      <p>Can a robot learn task-level skills without reinforcement learning, without training and without changing any model
+      weights? In Kedalion a reasoning LLM is the robot's mind: it reads its own body from the URDF and hardware
+      configuration, then plans, acts, checks the result with sensors, reflects and tries again until the goal is verified.
+      Every success and failure is stored as a reusable strategy, so the robot improves with experience rather than
+      training. Three agents share the work: Prometheus plans, Epimetheus reflects and Mnemosyne remembers. Fast, exact
+      jobs (state tracking, inverse kinematics, goal checks, safety) stay in plain code and MCP tools, and humans observe and
+      guide rather than control. The study tests whether this reaches skills in far fewer trials and at lower cost than RL,
+      whether sensor-verified goals stop false success reports, and whether skills transfer to a new robot by swapping only
+      its URDF.</p>
+      <div class="chips"><span class="chip">LLM agents</span><span class="chip">Robot learning</span><span class="chip">Memory</span><span class="chip">URDF</span><span class="chip">MCP</span><span class="chip">Human-on-the-loop</span></div>
     </article>
     <article class="pub">
       <div class="pub-status wip">Ongoing · R6–R10 complete</div>
