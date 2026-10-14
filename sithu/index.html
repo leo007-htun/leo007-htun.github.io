@@ -84,6 +84,11 @@ h2::before{content:"";width:18px;height:3px;background:var(--cyan);display:inlin
 .pub-status{font-size:.75rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase}
 .pub-status.ok{color:var(--green)}
 .pub-status.wip{color:var(--cyan)}
+.vids{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:14px}
+.vid{background:var(--panel);border:1px solid var(--line);border-radius:10px;overflow:hidden;color:var(--head);font-weight:600;font-size:.92rem}
+.vid img{display:block;width:100%;aspect-ratio:16/9;object-fit:cover}
+.vid span{display:block;padding:10px 12px}
+.vid:hover{border-color:var(--cyan);text-decoration:none}
 .timeline{list-style:none;margin:0;padding:0;border-left:2px solid var(--line)}
 .timeline li{position:relative;padding:0 0 18px 20px}
 .timeline li::before{content:"";position:absolute;left:-7px;top:7px;width:12px;height:12px;border-radius:50%;background:var(--bg);border:2px solid var(--cyan)}
@@ -115,7 +120,7 @@ footer{padding:40px 0 56px;text-align:center;color:var(--muted);font-size:.9rem}
 </header>
 
 <nav class="toc"><div class="wrap">
-  <a href="#about">About</a><a href="#research">Publications</a><a href="#aon">AON</a><a href="#ongoing">Research</a><a href="#projects">Projects</a>
+  <a href="#about">About</a><a href="#research">Publications</a><a href="#aon">AON</a><a href="#ongoing">Research</a><a href="#projects">Projects</a><a href="#videos">Videos</a>
   <a href="#experience">Experience</a><a href="#skills">Skills</a><a href="#contact">Contact</a>
 </div></nav>
 
@@ -158,6 +163,7 @@ footer{padding:40px 0 56px;text-align:center;color:var(--muted);font-size:.9rem}
       reaches 99.6% accuracy on the test set, and the system runs on Pepper alongside its existing functions without
       slowing the robot down.</p>
       <div class="chips"><span class="chip">Social robotics</span><span class="chip">Transfer learning</span><span class="chip">EfficientNetB0</span><span class="chip">Pepper</span><span class="chip">Healthcare</span></div>
+      <p class="venue"><a href="https://www.youtube.com/watch?v=x-VCrFGGo5o">Watch the demo on Pepper</a></p>
     </article>
   </div>
 </section>
@@ -212,7 +218,7 @@ footer{padding:40px 0 56px;text-align:center;color:var(--muted);font-size:.9rem}
       <h3>🎙️ Full-Duplex Voice Assistant</h3>
       <p>Real-time voice assistant that listens and speaks at the same time, so you can interrupt it like a person.</p>
       <div class="chips"><span class="chip">JavaScript</span><span class="chip">Real-time audio</span><span class="chip">LLM</span></div>
-      <div class="meta"><a href="https://github.com/leo007-htun/full_duplex_assistant">Code</a><span>★ 6</span></div>
+      <div class="meta"><a href="https://github.com/leo007-htun/full_duplex_assistant">Code</a><a href="https://www.youtube.com/watch?v=ioz0FZOchUY">Video</a><span>★ 6</span></div>
     </article>
     <article class="card">
       <h3>🤖 GPT on the Pepper robot</h3>
@@ -224,9 +230,22 @@ footer{padding:40px 0 56px;text-align:center;color:var(--muted);font-size:.9rem}
       <h3>🏗️ AMR digital twin</h3>
       <p>An autonomous mobile robot in a simulated warehouse (Ignition Gazebo) as a digital twin.</p>
       <div class="chips"><span class="chip">ROS</span><span class="chip">Gazebo</span><span class="chip">Navigation</span></div>
-      <div class="meta"><a href="https://github.com/leo007-htun/AMR_Digital_Twin">Code</a></div>
+      <div class="meta"><a href="https://github.com/leo007-htun/AMR_Digital_Twin">Code</a><a href="https://www.youtube.com/watch?v=O7xw2iyG2C4">Video</a></div>
     </article>
   </div>
+</section>
+
+<section id="videos">
+  <h2>Videos</h2>
+  <div class="vids">
+    <a class="vid" href="https://www.youtube.com/watch?v=wLiVhkLOd-8"><img src="https://i.ytimg.com/vi/wLiVhkLOd-8/hqdefault.jpg" alt="" loading="lazy"><span>AON: self-hosted agentic AI</span></a>
+    <a class="vid" href="https://www.youtube.com/watch?v=ioz0FZOchUY"><img src="https://i.ytimg.com/vi/ioz0FZOchUY/hqdefault.jpg" alt="" loading="lazy"><span>Real-time full-duplex voice assistant</span></a>
+    <a class="vid" href="https://www.youtube.com/watch?v=x-VCrFGGo5o"><img src="https://i.ytimg.com/vi/x-VCrFGGo5o/hqdefault.jpg" alt="" loading="lazy"><span>Facial emotion recognition on Pepper</span></a>
+    <a class="vid" href="https://www.youtube.com/watch?v=pvcattevyCg"><img src="https://i.ytimg.com/vi/pvcattevyCg/hqdefault.jpg" alt="" loading="lazy"><span>Chatting with PepperGPT</span></a>
+    <a class="vid" href="https://www.youtube.com/watch?v=IFhbP8MSOOM"><img src="https://i.ytimg.com/vi/IFhbP8MSOOM/hqdefault.jpg" alt="" loading="lazy"><span>Android agent</span></a>
+    <a class="vid" href="https://www.youtube.com/watch?v=-_mj-tTYSxs"><img src="https://i.ytimg.com/vi/-_mj-tTYSxs/hqdefault.jpg" alt="" loading="lazy"><span>ROS navigation and obstacle avoidance</span></a>
+  </div>
+  <p style="margin-top:14px"><a href="https://www.youtube.com/@SithuHtun-ku9lo">All videos on my YouTube channel →</a></p>
 </section>
 
 <section id="experience">
