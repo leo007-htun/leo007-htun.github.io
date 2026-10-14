@@ -89,6 +89,8 @@ h2::before{content:"";width:18px;height:3px;background:var(--cyan);display:inlin
 .vid img{display:block;width:100%;aspect-ratio:16/9;object-fit:cover}
 .vid span{display:block;padding:10px 12px}
 .vid:hover{border-color:var(--cyan);text-decoration:none}
+.sub{color:var(--head);font-size:1.05rem;margin:26px 0 12px}
+.lead{margin:0 0 16px}
 .timeline{list-style:none;margin:0;padding:0;border-left:2px solid var(--line)}
 .timeline li{position:relative;padding:0 0 18px 20px}
 .timeline li::before{content:"";position:absolute;left:-7px;top:7px;width:12px;height:12px;border-radius:50%;background:var(--bg);border:2px solid var(--cyan)}
@@ -132,7 +134,7 @@ footer{padding:40px 0 56px;text-align:center;color:var(--muted);font-size:.9rem}
   embedded systems: I started with Arduino and microcontrollers, moved to ROS navigation and robot models at
   ROM Robotics, and now work on large language model agents: memory, retrieval, tool use and serving models on a
   single GPU.</p>
-  <p>At Liverpool John Moores University I work as a Research Assistant on applied AI and robotics, with work published at IEEE DeSE and in review on emotion recognition for social robots. Most of my own recent engineering comes together in <a href="#aon">AON</a>, a self-hosted AI agent I designed, built and
+  <p>At Liverpool John Moores University I work as a Research Assistant on applied AI and robotics, with work published at IEEE DeSE and in review on emotion recognition for social robots. My research focuses on memory in language models: what survives in their hidden states, and how that state can become lasting memory for agents and robots. Most of my own recent engineering comes together in <a href="#aon">AON</a>, a self-hosted AI agent I designed, built and
   shipped end to end: the agent loop, the model serving, the web and Android apps, the Python package and the
   MCP server.</p>
 </section>
@@ -164,6 +166,32 @@ footer{padding:40px 0 56px;text-align:center;color:var(--muted);font-size:.9rem}
       slowing the robot down.</p>
       <div class="chips"><span class="chip">Social robotics</span><span class="chip">Transfer learning</span><span class="chip">EfficientNetB0</span><span class="chip">Pepper</span><span class="chip">Healthcare</span></div>
       <p class="venue"><a href="https://www.youtube.com/watch?v=x-VCrFGGo5o">Watch the demo on Pepper</a></p>
+    </article>
+  </div>
+  <h3 class="sub">Manuscripts in preparation</h3>
+  <div class="pubs">
+    <article class="pub">
+      <div class="pub-status wip">Manuscript · IEEE conference format</div>
+      <h3>Design and Implementation of a Full Duplex Conversational Speech System</h3>
+      <p class="authors"><b>S. Ye Htun</b>, D. Reilly · Liverpool John Moores University</p>
+      <p>A browser interface for full-duplex spoken conversation, where the user can interrupt the assistant mid-sentence
+      (barge-in). It combines short-lived session credentials, WebSocket audio, server-side voice activity detection and
+      application-level cancellation; a generation counter stops audio from an interrupted reply from coming back after
+      late callbacks. A FastAPI service protects the API key, applies rate limits and exports metrics. In a five-minute
+      observation window it served 3,397 requests with no HTTP errors, and early client measurements put the gap between
+      the end of the user's turn and the first audible reply at about 0.9 s.</p>
+      <div class="chips"><span class="chip">Speech AI</span><span class="chip">Barge-in</span><span class="chip">WebSocket</span><span class="chip">FastAPI</span><span class="chip">Observability</span></div>
+      <p class="venue"><a href="https://github.com/leo007-htun/full_duplex_assistant">Code</a> · <a href="https://www.youtube.com/watch?v=ioz0FZOchUY">Demo video</a></p>
+    </article>
+    <article class="pub">
+      <div class="pub-status wip">Draft</div>
+      <h3>Physics-Informed Hybrid Digital Twin for Photovoltaic Predictive Maintenance (PI-HDT)</h3>
+      <p>Most solar-panel digital twins are purely data-driven and are rarely tested on real faults. PI-HDT couples a
+      mechanistic performance model with a machine-learning residual, constrained by physics (the datasheet temperature
+      coefficient and a monotonic response to irradiance). It synthesises realistic faults with the single-diode model,
+      tracks drifting model coefficients to explain the cause of degradation, and uses conformal prediction intervals to
+      decide when to raise an alarm, evaluated across sites and seasons on operator-labelled field faults.</p>
+      <div class="chips"><span class="chip">Digital twin</span><span class="chip">Physics-informed ML</span><span class="chip">Predictive maintenance</span><span class="chip">Conformal prediction</span><span class="chip">Solar PV</span></div>
     </article>
   </div>
 </section>
@@ -198,15 +226,41 @@ footer{padding:40px 0 56px;text-align:center;color:var(--muted);font-size:.9rem}
 </section>
 
 <section id="ongoing">
-  <h2>Research in progress</h2>
-  <div class="grid">
-    <article class="card">
-      <h3>🧠 LatentRecall</h3>
-      <p>Can a language model gain lasting memory without changing its weights or keeping the conversation as text?
-      LatentRecall stores the model's own hidden-state traces of new experiences and uses them to reconstruct
-      information after the original context is gone.</p>
-      <div class="chips"><span class="chip">Active research</span><span class="chip">Transformers</span><span class="chip">Memory</span></div>
-      <div class="meta"><a href="https://github.com/leo007-htun/LatentRecall">Code</a></div>
+  <h2>Research</h2>
+  <p class="lead">My research asks how language models can keep and use memory over time: what survives inside a model's
+  hidden states, and how that state could become real long-term memory for agents and robots.</p>
+  <div class="pubs">
+    <article class="pub">
+      <div class="pub-status wip">PhD research proposal</div>
+      <h3>Persistent State Memory in Hybrid Language Models</h3>
+      <p>Language models forget everything between sessions. Hybrid models such as Qwen3.8 replace most attention layers
+      with linear-attention layers (Gated DeltaNet) that summarise all past text in a fixed-size recurrent state, small
+      enough to save, store and reload. The proposal will (1) derive and test the capacity and interference limits of
+      these states as persistent memory, (2) design methods to save, combine and reload states together with a small set of
+      attention key-value pairs, and (3) build a verifier-gated continual-learning loop that writes only checked
+      improvements to memory. Evaluation uses synthetic tasks and public benchmarks (BABILong, LongMemEval,
+      MemoryAgentBench) against strict, compute-matched baselines.</p>
+      <div class="chips"><span class="chip">Hybrid LLMs</span><span class="chip">Gated DeltaNet</span><span class="chip">Long-term memory</span><span class="chip">Continual learning</span></div>
+    </article>
+    <article class="pub">
+      <div class="pub-status wip">Ongoing · R6–R10 complete</div>
+      <h3>Recoverability of Token Identity in Delayed Transformer Hidden States</h3>
+      <p>A preregistered experimental programme on frozen Qwen3-4B. Does the exact identity of a token survive inside later
+      hidden states after the model has read many more tokens? At the token's own position it clearly does: top-1 recovery
+      of 40.2% over a 151,655-token vocabulary, against a matched null of 0.5%. Sixty-four tokens later, direct, linear,
+      multi-position and non-linear decoders all failed to beat matched structural nulls, which suggests apparent "memory"
+      often reflects structure (token family, length, position) rather than the exact token. The programme separates
+      these effects with held-out tests, matched nulls and bootstrap intervals, and is now moving to a new direction (R11).</p>
+      <div class="chips"><span class="chip">Interpretability</span><span class="chip">Probing</span><span class="chip">Qwen3</span><span class="chip">Preregistration</span></div>
+    </article>
+    <article class="pub">
+      <div class="pub-status wip">Ongoing</div>
+      <h3>LatentRecall: persistent hidden-state memory for frozen language models</h3>
+      <p>Can a model gain lasting memory without changing its weights or keeping the conversation as text? LatentRecall
+      stores the model's own hidden-state traces of new experiences and uses them to reconstruct information after the
+      original context is gone.</p>
+      <div class="chips"><span class="chip">Memory</span><span class="chip">Transformers</span></div>
+      <p class="venue"><a href="https://github.com/leo007-htun/LatentRecall">Code</a></p>
     </article>
   </div>
 </section>
