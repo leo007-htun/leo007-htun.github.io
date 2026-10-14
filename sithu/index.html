@@ -126,7 +126,7 @@ footer{padding:40px 0 56px;text-align:center;color:var(--muted);font-size:.9rem}
 
 <nav class="toc"><div class="wrap">
   <a href="#about">About</a><a href="#research">Publications</a><a href="#aon">AON</a><a href="#humanoid">Humanoid</a><a href="#ongoing">Research</a><a href="#projects">Projects</a><a href="#videos">Videos</a>
-  <a href="#experience">Experience</a><a href="#skills">Skills</a><a href="#contact">Contact</a>
+  <a href="#experience">Experience</a><a href="#contact">Contact</a>
 </div></nav>
 
 <main class="wrap">
@@ -286,6 +286,21 @@ footer{padding:40px 0 56px;text-align:center;color:var(--muted);font-size:.9rem}
       <div class="chips"><span class="chip">LLM agents</span><span class="chip">Robot learning</span><span class="chip">Memory</span><span class="chip">URDF</span><span class="chip">MCP</span><span class="chip">Human-on-the-loop</span></div>
     </article>
     <article class="pub">
+      <div class="pub-status wip">Research study plan · October 2026</div>
+      <h3>MIMIC: Coverage-Guided, Explainable LLM Agents for Fleet-Scale Mobile Testing</h3>
+      <p>LLM-based GUI agents can now complete natural-language tasks on Android, but they are evaluated on task success
+      rather than on their value as test instruments. This study investigates whether GUI agents driven by operational-profile
+      personas and steered by functional-coverage feedback can test mobile software more effectively than random,
+      model-based and scripted baselines (Monkey, Sapienz-style search, DroidBot and existing LLM testers), while remaining
+      explainable, reproducible and non-intrusive to the device under test. MIMIC separates <i>what</i> to test (a persona
+      engine with a coverage map) from <i>how</i> to act on screen (a replaceable open-weight GUI agent), runs entirely
+      on-premises across emulated and physical devices, and records every action in an audit ledger for deterministic fault
+      replay. Evaluation uses benchmarks with known faults (Themis, AndroidWorld) and measures coverage, fault detection,
+      reproducibility and device overhead, within a closed test environment with built-in safety limits.</p>
+      <div class="chips"><span class="chip">LLM GUI agents</span><span class="chip">Software testing</span><span class="chip">Coverage guidance</span><span class="chip">Explainability</span><span class="chip">Android</span></div>
+      <p class="venue"><a href="https://www.youtube.com/watch?v=IFhbP8MSOOM">Proof-of-concept video</a></p>
+    </article>
+    <article class="pub">
       <div class="pub-status wip">Ongoing · R6–R10 complete</div>
       <h3>Recoverability of Token Identity in Delayed Transformer Hidden States</h3>
       <p>A preregistered experimental programme on frozen Qwen3-4B. Does the exact identity of a token survive inside later
@@ -367,17 +382,6 @@ footer{padding:40px 0 56px;text-align:center;color:var(--muted);font-size:.9rem}
     <li><div class="when">2019 – 2020</div><div class="what">B.Eng Mechatronics, University of Wolverhampton</div></li>
     <li><div class="when">2016 – 2018</div><div class="what">HND Electrical &amp; Electronic Engineering (Level 5), Pearson</div></li>
   </ul>
-</section>
-
-<section id="skills">
-  <h2>Skills</h2>
-  <div class="skills">
-    <div><b>AI &amp; LLMs</b><span>Agents and tool use, RAG, embeddings, MCP, prompt design, vLLM and Ollama serving, PyTorch, TensorFlow, scikit-learn</span></div>
-    <div><b>Robotics</b><span>ROS and ROS 2, Gazebo, RViz, URDF, navigation and localization, Pepper</span></div>
-    <div><b>Software</b><span>Python, C++, C#, JavaScript and TypeScript, FastAPI, Flask, SQL, Android</span></div>
-    <div><b>Systems</b><span>Linux, Docker, Kubernetes, AWS, Cloudflare, embedded Linux (Yocto), STM32 and Arduino</span></div>
-    <div><b>Engineering</b><span>SolidWorks, AutoCAD, MATLAB, OpenCV, electronics</span></div>
-  </div>
 </section>
 
 <section id="contact">
