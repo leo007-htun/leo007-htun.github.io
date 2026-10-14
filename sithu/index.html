@@ -162,10 +162,13 @@ footer{padding:40px 0 56px;text-align:center;color:var(--muted);font-size:.9rem}
       <p class="authors">B. Orimba, O. Aldhaibani, <b>S. Ye Htun</b>, R. Mohammed</p>
       <p class="venue">2025 18th International Conference on Development in eSystem Engineering (DeSE), Bucharest, Romania · pp. 1–6 ·
         <a href="https://doi.org/10.1109/DeSE68208.2025.11367895">doi:10.1109/DeSE68208.2025.11367895</a></p>
-      <p>A low-cost, end-to-end self-driving prototype on an RC car with a Raspberry Pi 4. A camera and an ultrasonic
-      sensor are combined by late fusion to read traffic lights and avoid obstacles. A fine-tuned SSD-MobileNetV2 reaches
-      0.812 mAP (COCO), and after INT8 quantisation and ONNX Runtime it runs in real time at about 286 ms per frame within
-      the Pi's thermal limits. The car stops on red or amber and moves only on a confirmed green with a clear path.</p>
+      <p>This paper presents a low-cost, end-to-end autonomous driving prototype built on a radio-controlled vehicle
+      platform with a Raspberry Pi 4. Visual and range data from a monocular camera and an ultrasonic sensor are combined
+      through late fusion for traffic-light interpretation and obstacle avoidance. A fine-tuned SSD-MobileNetV2 detector
+      achieves a mean average precision of 0.812 (COCO metrics); following INT8 quantisation and deployment with ONNX
+      Runtime, it attains real-time inference at approximately 286 ms per frame within the thermal constraints of the
+      platform. The vehicle reliably halts on red and amber signals and proceeds only on a confirmed green signal with an
+      unobstructed path.</p>
       <div class="chips"><span class="chip">Edge AI</span><span class="chip">Sensor fusion</span><span class="chip">TensorFlow</span><span class="chip">ONNX</span><span class="chip">Raspberry Pi</span></div>
     </article>
     <article class="pub">
@@ -173,13 +176,13 @@ footer{padding:40px 0 56px;text-align:center;color:var(--muted);font-size:.9rem}
       <h3>Pep-FER: A Facial Emotion Recognition System using EfficientNetB0 with a Pepper Social Robot</h3>
       <p class="authors">D. Reilly, <b>S. Ye Htun</b>, P. Fergus, C. Chalmers, M. Taylor, S. Thompson</p>
       <p class="venue">Liverpool John Moores University · supported by the Liverpool City Region Life Sciences Investment Zone (TALASCM project)</p>
-      <p>Social robots could support care for older adults and people living with dementia, for example in Cognitive
-      Stimulation Therapy, but they need to read people's emotions. We built a facial emotion recognition system for the
-      Pepper robot using the NAOqi API and an EfficientNetB0 backbone, trained on a merged, balanced dataset. The best model
-      reaches 99.6% accuracy on the test set, and the system runs on Pepper alongside its existing functions without
-      slowing the robot down.</p>
+      <p>Socially assistive robots have considerable potential in the care of older adults and people living with
+      dementia, for example in Cognitive Stimulation Therapy, provided they can recognise human affect. This work presents a
+      facial emotion recognition (FER) system for the Pepper robot, implemented with the NAOqi API and an EfficientNetB0
+      backbone trained on a merged, balanced and normalised dataset. The optimal model achieves a test accuracy of 99.6%,
+      and the system is integrated with Pepper's existing functionality without degrading its performance.</p>
       <div class="chips"><span class="chip">Social robotics</span><span class="chip">Transfer learning</span><span class="chip">EfficientNetB0</span><span class="chip">Pepper</span><span class="chip">Healthcare</span></div>
-      <p class="venue"><a href="https://www.youtube.com/watch?v=x-VCrFGGo5o">Watch the demo on Pepper</a></p>
+      <p class="venue"><a href="https://www.youtube.com/watch?v=x-VCrFGGo5o">Demonstration video</a></p>
     </article>
   </div>
   <h3 class="sub">Manuscripts in preparation</h3>
@@ -188,68 +191,74 @@ footer{padding:40px 0 56px;text-align:center;color:var(--muted);font-size:.9rem}
       <div class="pub-status wip">Manuscript · IEEE conference format</div>
       <h3>Design and Implementation of a Full Duplex Conversational Speech System</h3>
       <p class="authors"><b>S. Ye Htun</b>, D. Reilly · Liverpool John Moores University</p>
-      <p>A browser interface for full-duplex spoken conversation, where the user can interrupt the assistant mid-sentence
-      (barge-in). It combines short-lived session credentials, WebSocket audio, server-side voice activity detection and
-      application-level cancellation; a generation counter stops audio from an interrupted reply from coming back after
-      late callbacks. A FastAPI service protects the API key, applies rate limits and exports metrics. In a five-minute
-      observation window it served 3,397 requests with no HTTP errors, and early client measurements put the gap between
-      the end of the user's turn and the first audible reply at about 0.9 s.</p>
+      <p>This paper describes the design and implementation of a browser-based interface for full-duplex spoken
+      dialogue that supports user interruption (barge-in). The system combines ephemeral session credentials, WebSocket audio
+      transport, server-side voice activity detection and application-level cancellation; a generation counter prevents
+      audio from an interrupted response from re-entering the playback queue after asynchronous callbacks complete. A
+      FastAPI service protects the permanent API credential, enforces rate limits and exports operational metrics. During a
+      five-minute observation window the service handled 3,397 requests without an observed HTTP error, and preliminary
+      client measurements indicate a mean latency of approximately 0.9 s between the end of a user turn and the first
+      audible response.</p>
       <div class="chips"><span class="chip">Speech AI</span><span class="chip">Barge-in</span><span class="chip">WebSocket</span><span class="chip">FastAPI</span><span class="chip">Observability</span></div>
       <p class="venue"><a href="https://github.com/leo007-htun/full_duplex_assistant">Code</a> · <a href="https://www.youtube.com/watch?v=ioz0FZOchUY">Demo video</a></p>
     </article>
     <article class="pub">
       <div class="pub-status wip">Draft</div>
       <h3>Physics-Informed Hybrid Digital Twin for Photovoltaic Predictive Maintenance (PI-HDT)</h3>
-      <p>Most solar-panel digital twins are purely data-driven and are rarely tested on real faults. PI-HDT couples a
-      mechanistic performance model with a machine-learning residual, constrained by physics (the datasheet temperature
-      coefficient and a monotonic response to irradiance). It synthesises realistic faults with the single-diode model,
-      tracks drifting model coefficients to explain the cause of degradation, and uses conformal prediction intervals to
-      decide when to raise an alarm, evaluated across sites and seasons on operator-labelled field faults.</p>
+      <p>Data-driven digital twins for photovoltaic (PV) systems report low prediction error but are rarely validated
+      on real faults. PI-HDT couples a mechanistic performance model with a machine-learning residual, regularised by
+      physical constraints (the datasheet temperature coefficient and a monotonic irradiance response). Realistic fault
+      signatures are synthesised with the single-diode model, drift in physically meaningful model coefficients is tracked to
+      attribute degradation to its causes, and conformal prediction intervals govern alarm generation. Evaluation uses
+      time-blocked and cross-site splits with operator-labelled field faults.</p>
       <div class="chips"><span class="chip">Digital twin</span><span class="chip">Physics-informed ML</span><span class="chip">Predictive maintenance</span><span class="chip">Conformal prediction</span><span class="chip">Solar PV</span></div>
     </article>
   </div>
 </section>
 
 <section id="aon">
-  <h2>Featured: AON</h2>
+  <h2>AON: Self-Hosted Agentic AI</h2>
   <div class="grid">
     <article class="card feature">
-      <h3>🛰️ AON: a self-contained AI agent on your own GPU</h3>
-      <div class="stats"><span>PyPI: aon-agent</span><span>Official MCP Registry</span><span>Web + Android</span><span>~600 tests</span><span>MIT licensed</span></div>
-      <p>A private AI agent that runs entirely on local hardware, with no cloud LLM. It answers questions, runs tools
-      (files, shell, web search, maps), remembers the user across chats, reads their documents and extends itself
-      with new models, skills and MCP servers.</p>
+      <h3>AON: a self-contained, obliterated agentic AI system for local hardware</h3>
+      <div class="stats"><span>PyPI: aon-agent</span><span>Official MCP Registry</span><span>Web and Android</span><span>Approx. 600 automated tests</span><span>MIT licensed</span></div>
+      <p>AON is an open-source agentic AI system that operates entirely on local hardware, without reliance on
+      cloud-hosted language models. It performs tool-augmented reasoning (file operations, shell execution, web retrieval and
+      geospatial routing), maintains long-term episodic memory across sessions, performs retrieval over user documents and
+      extends its own capabilities through new models, skills and Model Context Protocol (MCP) servers.</p>
       <div class="chips">
         <span class="chip">Python</span><span class="chip">FastAPI</span><span class="chip">vLLM</span><span class="chip">Ollama</span>
         <span class="chip">RAG (SQLite FTS5 + vectors)</span><span class="chip">MCP server &amp; client</span><span class="chip">WebSocket</span>
         <span class="chip">Android</span><span class="chip">Cloudflare Tunnel</span>
       </div>
-      <p><b>What I built:</b> an agent loop with an approval gate for shell and file actions; long-term memory with
-      semantic search; a hybrid-search document library; exact-token context fitting against the model server;
-      a 27B model served with vLLM on one RTX 4090; OpenStreetMap routing on a 3D globe; a <code>pip</code>-installable
-      CLI; and an MCP server so Claude Desktop, Claude Code and Cursor can use AON as a tool.</p>
+      <p><b>Contributions:</b> an agent loop with a human-in-the-loop approval gate for state-changing actions;
+      long-term memory with semantic retrieval; a hybrid lexical and dense document retrieval index; exact token-budget
+      context management against the inference server; serving of a 27-billion-parameter model with vLLM on a single
+      RTX 4090 GPU; OpenStreetMap-based routing on a 3D globe; a <code>pip</code>-installable command-line interface; and an
+      MCP server that exposes AON as a tool to Claude Desktop, Claude Code and Cursor.</p>
       <div class="meta">
         <a href="https://leo007-htun.github.io/AON/">Website</a>
         <a href="https://github.com/leo007-htun/AON">Source</a>
         <a href="https://pypi.org/project/aon-agent/">PyPI</a>
         <a href="https://www.youtube.com/watch?v=wLiVhkLOd-8">Demo video</a>
-        <a href="https://github.com/leo007-htun/AON/releases/latest">Android APK</a>
+        <a href="https://github.com/leo007-htun/AON/releases/latest">Android application</a>
       </div>
     </article>
   </div>
 </section>
 
 <section id="humanoid">
-  <h2>Humanoid: J.A.R.V.I.S 0021</h2>
+  <h2>J.A.R.V.I.S 0021: An Open Humanoid Platform</h2>
   <article class="card feature humanoid">
     <img src="jarvis-0021.jpg" alt="J.A.R.V.I.S 0021 humanoid robot: a 3D-printed torso and arm with a depth-camera head" loading="lazy">
     <div>
       <div class="stats"><span>In progress</span><span>Open source</span><span>For research and teaching</span></div>
-      <p>A humanoid robot I am building to help students learn robotics hands-on. It brings together <b>ROS 2</b>,
-      <b>MoveIt</b>, vision-language and vision-language-action models (<b>VLM + VLA</b>) and <b>full-duplex</b> spoken
-      interaction, so students can learn perception, planning, control and AI-driven robot behaviour on one platform.</p>
-      <p>The goal is to make robotics education more practical, open and accessible for students who want to build,
-      experiment and do research.</p>
+      <p>J.A.R.V.I.S 0021 is an open-source humanoid robot under development as a platform for hands-on robotics
+      education and research. It integrates <b>ROS 2</b>, <b>MoveIt</b> motion planning, vision-language and
+      vision-language-action models (<b>VLM and VLA</b>) and <b>full-duplex</b> spoken interaction, enabling students to
+      study perception, planning, control and learned robot behaviour on a single platform.</p>
+      <p>The project aims to make robotics education more practical, open and accessible to students who wish to
+      build, experiment and conduct research.</p>
       <div class="chips"><span class="chip">ROS 2</span><span class="chip">MoveIt</span><span class="chip">VLM</span><span class="chip">VLA</span><span class="chip">Full-duplex speech</span><span class="chip">3D printing</span><span class="chip">Robotics education</span></div>
       <div class="meta"><a href="https://www.linkedin.com/posts/sithu-ye-htun_robotics-roboticseducation-ros2-share-7460723452337938432-Bv_n/">LinkedIn post</a></div>
     </div>
@@ -258,33 +267,36 @@ footer{padding:40px 0 56px;text-align:center;color:var(--muted);font-size:.9rem}
 
 <section id="ongoing">
   <h2>Research</h2>
-  <p class="lead">My research asks how language models can keep and use memory over time: what survives inside a model's
-  hidden states, and how that state could become real long-term memory for agents and robots, and how a language model can become a robot's mind that learns from experience instead of training.</p>
+  <p class="lead">My research investigates how language models retain and use information over time: what persists
+  within their internal representations, how that state might serve as persistent long-term memory for agents and robots,
+  and how a language model can act as the cognitive layer of a robot that learns from experience rather than from
+  training.</p>
   <div class="pubs">
     <article class="pub">
       <div class="pub-status wip">PhD research proposal</div>
       <h3>Persistent State Memory in Hybrid Language Models</h3>
-      <p>Language models forget everything between sessions. Hybrid models such as Qwen3.8 replace most attention layers
-      with linear-attention layers (Gated DeltaNet) that summarise all past text in a fixed-size recurrent state, small
-      enough to save, store and reload. The proposal will (1) derive and test the capacity and interference limits of
-      these states as persistent memory, (2) design methods to save, combine and reload states together with a small set of
-      attention key-value pairs, and (3) build a verifier-gated continual-learning loop that writes only checked
-      improvements to memory. Evaluation uses synthetic tasks and public benchmarks (BABILong, LongMemEval,
-      MemoryAgentBench) against strict, compute-matched baselines.</p>
+      <p>Large language models are stateless between sessions. Hybrid architectures such as Qwen3.8 replace most
+      attention layers with linear-attention layers (Gated DeltaNet), which summarise the preceding context in a fixed-size
+      recurrent state that can be saved, stored and reloaded. This proposal will (1) derive and test the capacity and
+      interference limits of such states as persistent memory; (2) design and evaluate methods to save, compose and reload
+      states together with a small set of attention key-value pairs; and (3) develop a verifier-gated continual-learning
+      loop that commits only verified improvements to memory. Evaluation employs controlled synthetic tasks and public
+      benchmarks (BABILong, LongMemEval, MemoryAgentBench) against strict, compute-matched baselines.</p>
       <div class="chips"><span class="chip">Hybrid LLMs</span><span class="chip">Gated DeltaNet</span><span class="chip">Long-term memory</span><span class="chip">Continual learning</span></div>
     </article>
     <article class="pub">
       <div class="pub-status wip">Draft · October 2026</div>
       <h3>Kedalion: A Cognitive Control Layer for Robotics</h3>
-      <p>Can a robot learn task-level skills without reinforcement learning, without training and without changing any model
-      weights? In Kedalion a reasoning LLM is the robot's mind: it reads its own body from the URDF and hardware
-      configuration, then plans, acts, checks the result with sensors, reflects and tries again until the goal is verified.
-      Every success and failure is stored as a reusable strategy, so the robot improves with experience rather than
-      training. Three agents share the work: Prometheus plans, Epimetheus reflects and Mnemosyne remembers. Fast, exact
-      jobs (state tracking, inverse kinematics, goal checks, safety) stay in plain code and MCP tools, and humans observe and
-      guide rather than control. The study tests whether this reaches skills in far fewer trials and at lower cost than RL,
-      whether sensor-verified goals stop false success reports, and whether skills transfer to a new robot by swapping only
-      its URDF.</p>
+      <p>Kedalion is a cognitive control layer that enables a robot to acquire task-level skills without reinforcement
+      learning, training or modification of model weights. A reasoning language model serves as the robot's cognitive
+      core: it derives a model of its embodiment from the URDF and hardware configuration, then plans, acts, verifies
+      outcomes against sensor data and reflects, iterating until the goal is verified. Successful and unsuccessful attempts
+      are stored as reusable strategies, so that performance improves with experience rather than training. Cognition is
+      distributed across three agents, Prometheus (planning), Epimetheus (reflection) and Mnemosyne (memory), while
+      time-critical and exact functions (state estimation, inverse kinematics, goal verification and safety) remain in
+      deterministic code and MCP tools; humans observe and guide rather than control. The study evaluates sample
+      efficiency and cost relative to reinforcement learning, the effect of sensor-verified goals on false success reports,
+      and cross-embodiment transfer by substituting only the URDF.</p>
       <div class="chips"><span class="chip">LLM agents</span><span class="chip">Robot learning</span><span class="chip">Memory</span><span class="chip">URDF</span><span class="chip">MCP</span><span class="chip">Human-on-the-loop</span></div>
     </article>
     <article class="pub">
@@ -305,20 +317,22 @@ footer{padding:40px 0 56px;text-align:center;color:var(--muted);font-size:.9rem}
     <article class="pub">
       <div class="pub-status wip">Ongoing · R6–R10 complete</div>
       <h3>Recoverability of Token Identity in Delayed Transformer Hidden States</h3>
-      <p>A preregistered experimental programme on frozen Qwen3-4B. Does the exact identity of a token survive inside later
-      hidden states after the model has read many more tokens? At the token's own position it clearly does: top-1 recovery
-      of 40.2% over a 151,655-token vocabulary, against a matched null of 0.5%. Sixty-four tokens later, direct, linear,
-      multi-position and non-linear decoders all failed to beat matched structural nulls, which suggests apparent "memory"
-      often reflects structure (token family, length, position) rather than the exact token. The programme separates
-      these effects with held-out tests, matched nulls and bootstrap intervals, and is now moving to a new direction (R11).</p>
+      <p>A preregistered experimental programme on frozen Qwen3-4B representations examines whether the exact identity
+      of a token remains recoverable from later hidden states after further tokens have been processed. At the token's own
+      position, identity is strongly recoverable: top-1 accuracy of 40.2% over a 151,655-token vocabulary, against a matched
+      null of 0.5%. At a delay of 64 tokens, direct, linear, multi-position and non-linear decoders all fail to exceed matched
+      structural nulls, suggesting that apparent retention largely reflects structural regularities (token family, length
+      and position) rather than unique token identity. The programme separates these effects through held-out evaluation,
+      matched nulls and bootstrap confidence intervals, and is proceeding to a new prospective direction (R11).</p>
       <div class="chips"><span class="chip">Interpretability</span><span class="chip">Probing</span><span class="chip">Qwen3</span><span class="chip">Preregistration</span></div>
     </article>
     <article class="pub">
       <div class="pub-status wip">Ongoing</div>
       <h3>LatentRecall: persistent hidden-state memory for frozen language models</h3>
-      <p>Can a model gain lasting memory without changing its weights or keeping the conversation as text? LatentRecall
-      stores the model's own hidden-state traces of new experiences and uses them to reconstruct information after the
-      original context is gone.</p>
+      <p>LatentRecall investigates whether a pretrained language model can acquire persistent memory without updating
+      its weights or retaining the original conversation as text. It captures model-native hidden-state traces of new
+      experiences, stores them as latent memories and uses them to reconstruct information after the original context has
+      been removed.</p>
       <div class="chips"><span class="chip">Memory</span><span class="chip">Transformers</span></div>
       <p class="venue"><a href="https://github.com/leo007-htun/LatentRecall">Code</a></p>
     </article>
@@ -329,20 +343,20 @@ footer{padding:40px 0 56px;text-align:center;color:var(--muted);font-size:.9rem}
   <h2>Selected projects</h2>
   <div class="grid">
     <article class="card">
-      <h3>🎙️ Full-Duplex Voice Assistant</h3>
-      <p>Real-time voice assistant that listens and speaks at the same time, so you can interrupt it like a person.</p>
+      <h3>Full-Duplex Voice Assistant</h3>
+      <p>A real-time conversational agent that listens and speaks concurrently, allowing users to interrupt it naturally during a response.</p>
       <div class="chips"><span class="chip">JavaScript</span><span class="chip">Real-time audio</span><span class="chip">LLM</span></div>
-      <div class="meta"><a href="https://github.com/leo007-htun/full_duplex_assistant">Code</a><a href="https://www.youtube.com/watch?v=ioz0FZOchUY">Video</a><span>★ 6</span></div>
+      <div class="meta"><a href="https://github.com/leo007-htun/full_duplex_assistant">Code</a><a href="https://www.youtube.com/watch?v=ioz0FZOchUY">Video</a></div>
     </article>
     <article class="card">
-      <h3>🤖 GPT on the Pepper robot</h3>
-      <p>A low-latency conversational Pepper robot, the platform behind the Pep-FER emotion recognition work.</p>
+      <h3>Large Language Models on the Pepper Robot</h3>
+      <p>A low-latency conversational interface for the Pepper social robot, which also served as the platform for the Pep-FER emotion recognition study.</p>
       <div class="chips"><span class="chip">Pepper</span><span class="chip">LLM</span><span class="chip">Speech</span></div>
       <div class="meta"><a href="https://github.com/leo007-htun/pepper_gpt">Code</a><a href="https://youtu.be/BHJpKFnpUOA">Video</a></div>
     </article>
     <article class="card">
-      <h3>🏗️ AMR digital twin</h3>
-      <p>An autonomous mobile robot in a simulated warehouse (Ignition Gazebo) as a digital twin.</p>
+      <h3>Autonomous Mobile Robot Digital Twin</h3>
+      <p>A digital twin of an autonomous mobile robot operating in a simulated warehouse environment (Ignition Gazebo).</p>
       <div class="chips"><span class="chip">ROS</span><span class="chip">Gazebo</span><span class="chip">Navigation</span></div>
       <div class="meta"><a href="https://github.com/leo007-htun/AMR_Digital_Twin">Code</a><a href="https://www.youtube.com/watch?v=O7xw2iyG2C4">Video</a></div>
     </article>
@@ -355,32 +369,32 @@ footer{padding:40px 0 56px;text-align:center;color:var(--muted);font-size:.9rem}
     <a class="vid" href="https://www.youtube.com/watch?v=wLiVhkLOd-8"><img src="https://i.ytimg.com/vi/wLiVhkLOd-8/hqdefault.jpg" alt="" loading="lazy"><span>AON: self-hosted agentic AI</span></a>
     <a class="vid" href="https://www.youtube.com/watch?v=ioz0FZOchUY"><img src="https://i.ytimg.com/vi/ioz0FZOchUY/hqdefault.jpg" alt="" loading="lazy"><span>Real-time full-duplex voice assistant</span></a>
     <a class="vid" href="https://www.youtube.com/watch?v=x-VCrFGGo5o"><img src="https://i.ytimg.com/vi/x-VCrFGGo5o/hqdefault.jpg" alt="" loading="lazy"><span>Facial emotion recognition on Pepper</span></a>
-    <a class="vid" href="https://www.youtube.com/watch?v=pvcattevyCg"><img src="https://i.ytimg.com/vi/pvcattevyCg/hqdefault.jpg" alt="" loading="lazy"><span>Chatting with PepperGPT</span></a>
-    <a class="vid" href="https://www.youtube.com/watch?v=IFhbP8MSOOM"><img src="https://i.ytimg.com/vi/IFhbP8MSOOM/hqdefault.jpg" alt="" loading="lazy"><span>Android agent</span></a>
+    <a class="vid" href="https://www.youtube.com/watch?v=pvcattevyCg"><img src="https://i.ytimg.com/vi/pvcattevyCg/hqdefault.jpg" alt="" loading="lazy"><span>Conversational interaction with Pepper</span></a>
+    <a class="vid" href="https://www.youtube.com/watch?v=IFhbP8MSOOM"><img src="https://i.ytimg.com/vi/IFhbP8MSOOM/hqdefault.jpg" alt="" loading="lazy"><span>LLM agent operating an Android device</span></a>
     <a class="vid" href="https://www.youtube.com/watch?v=-_mj-tTYSxs"><img src="https://i.ytimg.com/vi/-_mj-tTYSxs/hqdefault.jpg" alt="" loading="lazy"><span>ROS navigation and obstacle avoidance</span></a>
   </div>
-  <p style="margin-top:14px"><a href="https://www.youtube.com/@SithuHtun-ku9lo">All videos on my YouTube channel →</a></p>
+  <p style="margin-top:14px"><a href="https://www.youtube.com/@SithuHtun-ku9lo">Further demonstrations on YouTube</a></p>
 </section>
 
 <section id="experience">
   <h2>Experience &amp; education</h2>
   <ul class="timeline">
     <li><div class="when">2026</div><div class="what">Creator of AON</div>
-      <div>AON is an obliterated agentic AI. Designed, built and published it as a self-hosted AI agent: PyPI package, MCP Registry server, web and Android apps.</div></li>
+      <div>Designed, implemented and released AON, a self-hosted, obliterated agentic AI system, distributed as a PyPI package and an MCP Registry server, with web and Android clients.</div></li>
     <li><div class="when">Dec 2025 – present</div><div class="what">Research Assistant: AI Systems Developer, Liverpool John Moores University</div>
-      <div>A multi-tier decision engine for predictive maintenance, energy optimisation and carbon-aware asset management, in a UK–South Korea collaborative R&amp;D project funded by Innovate UK: real-time telemetry and forecasts in cloud–edge workflows, AI-agent and MPC control pipelines with edge safety enforcement, and containerised deployment.</div></li>
+      <div>Development of a multi-tier decision engine for predictive maintenance, energy optimisation and carbon-aware asset management within a UK–South Korea collaborative R&amp;D project funded by Innovate UK, integrating real-time telemetry and forecasts into cloud–edge workflows, AI-agent and model predictive control (MPC) pipelines with edge safety enforcement, and containerised deployment.</div></li>
     <li><div class="when">Mar 2025 – Jul 2025</div><div class="what">Research Assistant: Security Modelling and Verification (DesVeSec), Liverpool John Moores University</div>
-      <div>An AI-driven pipeline to capture and verify security requirements at design time, with interactive 3D BPMN process modelling, compliance checks and automated risk reports. Supported a commercial trial with Fujitsu UK and demos for government, energy and finance; part of an LJMU REF Impact Case Study.</div></li>
+      <div>Development of an AI-driven pipeline for capturing and verifying security requirements at design time, incorporating interactive 3D BPMN process modelling, automated compliance checking and risk reporting. Supported a commercial trial with Fujitsu UK and demonstrations to the government, energy and finance sectors; the work contributed to an LJMU REF Impact Case Study.</div></li>
     <li><div class="when">Sep 2024 – Jul 2025</div><div class="what">Research Assistant: AI and Cyber-Physical / Intelligent Systems, Liverpool John Moores University</div>
-      <div>AI optimisation and control pipelines on edge devices such as NVIDIA Jetson: LLM and multimodal models under tight compute budgets, real-time IoT analytics, and predictive and reinforcement learning for adaptive systems.</div></li>
+      <div>Development of AI-based optimisation and control pipelines for resource-constrained edge devices (e.g. NVIDIA Jetson), including deployment of large language and multimodal models under limited compute budgets, real-time IoT analytics, and predictive and reinforcement learning for adaptive system behaviour.</div></li>
     <li><div class="when">Sep 2024 – Dec 2024</div><div class="what">Sessional Lecturer: Computer Science, Liverpool John Moores University</div>
-      <div>Lectures, labs and tutorials in Introduction to Programming (Java), Database Systems and Computer Systems, with assessment and marking moderation.</div></li>
+      <div>Delivered lectures, laboratory sessions and tutorials in Introduction to Programming (Java), Database Systems and Computer Systems, and contributed to assessment and marking moderation.</div></li>
     <li><div class="when">Apr 2024 – Aug 2024</div><div class="what">Research Assistant: Applied AI for Human Interaction, Liverpool John Moores University</div>
-      <div>LLMs and multimodal AI in interactive agents and embedded devices for educational and therapeutic settings, with resource-efficient deployment and human–AI interaction studies.</div></li>
+      <div>Integration of large language models and multimodal AI into interactive agents and embedded devices for educational and therapeutic settings, with a focus on resource-efficient deployment, model evaluation and human–AI interaction.</div></li>
     <li><div class="when">2023 – 2024</div><div class="what">MSc Artificial Intelligence &amp; Machine Learning, Liverpool John Moores University</div>
-      <div>🏆 <b>Best Dissertation Award</b> (<a href="https://www.ljmu.ac.uk/about-us/news/articles/2024/4/16/ai-graduation">LJMU news</a>).</div></li>
+      <div>Recipient of the <b>Best Dissertation Award</b> (<a href="https://www.ljmu.ac.uk/about-us/news/articles/2024/4/16/ai-graduation">LJMU News, April 2024</a>).</div></li>
     <li><div class="when">2019 – 2023</div><div class="what">Founding Robotics Engineer, ROM Robotics (Myanmar)</div>
-      <div>ROS-based autonomous mobile robots: robot design and URDF models, improved AMCL localization, custom embedded Linux with Yocto/OpenEmbedded, and STM32 firmware with IMU sensor fusion. Contributed ROS 2, RTOS and Docker notes to the ROS community.</div></li>
+      <div>Developed ROS-based autonomous mobile robots as an early member of the engineering team, spanning mechanical design and kinematic modelling (URDF), improvements to AMCL localisation, custom embedded Linux distributions (Yocto/OpenEmbedded) and STM32 firmware with IMU sensor fusion. Contributed ROS 2, RTOS and Docker documentation to the ROS community.</div></li>
     <li><div class="when">2019 – 2020</div><div class="what">B.Eng Mechatronics, University of Wolverhampton</div></li>
     <li><div class="when">2016 – 2018</div><div class="what">HND Electrical &amp; Electronic Engineering (Level 5), Pearson</div></li>
   </ul>
@@ -388,8 +402,10 @@ footer{padding:40px 0 56px;text-align:center;color:var(--muted);font-size:.9rem}
 
 <section id="contact">
   <h2>Contact</h2>
-  <p>Open to roles in AI engineering, LLM agents and robotics. The quickest way to reach me is
-  email at <a class="email" href="mailto:sithu.y.htun@gmail.com">sithu.y.htun@gmail.com</a> or <a href="https://www.linkedin.com/in/sithu-ye-htun-1630b11a9/">LinkedIn</a>. Demos of my work are on my <a href="https://www.youtube.com/@SithuHtun-ku9lo">YouTube channel</a>.</p>
+  <p>I welcome enquiries regarding research collaboration and positions in embodied AI, language-model agents and
+  robotics. I can be contacted by email at <a class="email" href="mailto:sithu.y.htun@gmail.com">sithu.y.htun@gmail.com</a>
+  or via <a href="https://www.linkedin.com/in/sithu-ye-htun-1630b11a9/">LinkedIn</a>; demonstrations of my work are
+  available on my <a href="https://www.youtube.com/@SithuHtun-ku9lo">YouTube channel</a>.</p>
 </section>
 
 </main>
